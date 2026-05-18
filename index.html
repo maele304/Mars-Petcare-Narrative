@@ -103,6 +103,20 @@
     margin-bottom: 12px;
   }
   .title-block h1 .light { color: var(--navy-mute); font-weight: 500; }
+  .title-block h1 .hero-placeholder {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.58em;
+    color: var(--ink-mute);
+    background: rgba(232, 181, 58, 0.18);
+    border: 1px dashed var(--gold);
+    padding: 2px 12px;
+    letter-spacing: 0.02em;
+    vertical-align: 0.18em;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
   .title-sub {
     font-size: 17px;
     color: var(--ink);
@@ -217,6 +231,28 @@
     border-left: 4px solid var(--accent);
     padding: 32px 40px;
     margin-bottom: 36px;
+    position: relative;
+  }
+  .pov-statement.is-placeholder {
+    border-left-style: dashed;
+    border-left-color: var(--gold);
+    background: linear-gradient(180deg, rgba(232,181,58,0.06) 0%, var(--white) 30%);
+  }
+  .pov-placeholder-badge {
+    display: inline-block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink-mute);
+    background: rgba(232,181,58,0.22);
+    border: 1px dashed var(--gold);
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-left: 12px;
+    vertical-align: middle;
   }
   .pov-label {
     font-size: 11px;
@@ -1497,6 +1533,91 @@
     margin-left: 12px;
     margin-bottom: 8px;
   }
+  /* === Side-by-side vertical formula layout === */
+  .hc-formula-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .hc-fvert {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    padding: 22px 24px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hc-fvert.healthcare { border-top: 4px solid var(--navy); }
+  .hc-fvert.mars { border-top: 4px solid var(--accent); background: var(--cream-soft); }
+  .hc-fvert-eyebrow {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .hc-fvert.healthcare .hc-fvert-eyebrow { color: var(--navy); }
+  .hc-fvert.mars .hc-fvert-eyebrow { color: var(--accent); }
+  .hc-fvert-title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .hc-fvert-eq {
+    font-family: 'Antonio', sans-serif;
+    font-size: 28px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .hc-fvert-line {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-items: baseline;
+    gap: 6px;
+    padding: 5px 0;
+    font-size: 13.5px;
+    line-height: 1.35;
+    border-bottom: 1px dashed var(--hairline-soft);
+  }
+  .hc-fvert-line:last-child { border-bottom: none; }
+  .hc-fvert-line.no-line { border-bottom: none; padding-bottom: 2px; }
+  .hc-fvert-op {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    text-align: right;
+    font-size: 17px;
+    line-height: 1;
+  }
+  .hc-fvert-op.minus { color: var(--accent); }
+  .hc-fvert-op.plus  { color: var(--navy-soft); }
+  .hc-fvert-op.sum, .hc-fvert-op.div, .hc-fvert-op.eq {
+    color: var(--navy);
+    font-size: 15px;
+  }
+  .hc-fvert-term { color: var(--ink); }
+  .hc-fvert-term.lead {
+    font-weight: 600;
+    color: var(--navy);
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .hc-fvert-group {
+    margin: 6px 0 6px 14px;
+    padding: 6px 0 6px 14px;
+    border-left: 2px solid var(--gold);
+  }
+  .hc-fvert-group .hc-fvert-line { padding: 4px 0; font-size: 13px; }
+
+  @media (max-width: 960px) {
+    .hc-formula-compare { grid-template-columns: 1fr; }
+  }
+
   .hc-formula-callout {
     background: var(--navy);
     color: var(--white);
@@ -1747,6 +1868,119 @@
     font-style: normal;
     font-weight: 600;
   }
+
+  /* === Engine stack (Option E) === */
+  .hc-engine-stack {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    overflow: hidden;
+  }
+
+  /* Thin customer surface strip on top */
+  .hc-surface-strip {
+    background: var(--cream);
+    padding: 14px 26px 16px;
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  .hc-surface-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+  }
+  .hc-surface-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hc-surface-moment {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 600;
+    background: var(--white);
+    padding: 4px 12px;
+    border: 1px solid var(--hairline-soft);
+  }
+  .hc-surface-arrow {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Bridge bar (full-width horizontal, between surface and engine) */
+  .hc-engine-bridge {
+    background: linear-gradient(90deg, var(--accent) 0%, #A11209 100%);
+    color: var(--white);
+    padding: 12px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .hc-engine-bridge-arrow {
+    color: var(--gold);
+    font-size: 10px;
+    line-height: 1;
+  }
+  .hc-engine-bridge-text {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+  }
+
+  /* Engine room — the focal point, large */
+  .hc-engine-room {
+    background: var(--navy);
+    color: var(--white);
+    padding: 24px 26px 28px;
+    background-image:
+      radial-gradient(circle at 18% 25%, rgba(232,181,58,0.06), transparent 50%),
+      radial-gradient(circle at 82% 75%, rgba(184,24,16,0.06), transparent 50%);
+  }
+  .hc-engine-room-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .hc-engine-room .hc-mesh-grid {
+    gap: 12px;
+  }
+  .hc-engine-caption {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: rgba(232,181,58,0.08);
+    border-left: 2px solid var(--gold);
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.88);
+    font-style: italic;
+  }
+  .hc-engine-caption strong {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  @media (max-width: 960px) {
+    .hc-surface-flow { flex-direction: column; align-items: stretch; }
+    .hc-surface-arrow { transform: rotate(90deg); align-self: center; }
+    .hc-engine-bridge { flex-direction: column; gap: 6px; }
+  }
+  /* === end engine stack === */
 
   /* Scroll margin offsets for in-tab anchored sections (sticky nav + mini-nav) */
   #hc-finding, #hc-cases, #hc-formula, #hc-frontback,
@@ -2090,6 +2324,166 @@
     text-transform: uppercase;
   }
 
+  /* === BRIDGE: Failure modes → Mars design requirements === */
+  .hc-prem-section { margin-bottom: 56px; }
+  .hc-prem-section h3 { font-size: 22px; color: var(--navy); margin-bottom: 6px; line-height: 1.2; }
+  .hc-prem-section .hc-sub {
+    font-size: 14px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 22px;
+  }
+  .hc-prem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    overflow: hidden;
+  }
+  .hc-prem-head { display: contents; }
+  .hc-prem-head > div {
+    padding: 12px 18px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hc-prem-head > div.failure { background: #8E1812; color: var(--white); }
+  .hc-prem-head > div.design { background: var(--navy); color: var(--white); }
+  .hc-prem-head > div.proof { background: var(--gold-soft); color: #6B4F1A; }
+  .hc-prem-row { display: contents; }
+  .hc-prem-cell {
+    padding: 14px 18px;
+    border-top: 1px solid var(--hairline-soft);
+    border-right: 1px solid var(--hairline-soft);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .hc-prem-cell:nth-child(3n) { border-right: none; }
+  .hc-prem-cell.failure {
+    background: var(--cream);
+    color: var(--navy);
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    border-left: 3px solid var(--accent);
+  }
+  .hc-prem-cell.failure.med-high { border-left-color: var(--tan); }
+  .hc-prem-cell.design { background: var(--cream-soft); color: var(--ink); }
+  .hc-prem-cell.design strong { color: var(--navy); font-weight: 600; }
+  .hc-prem-cell.proof { background: var(--white); color: var(--ink-mute); font-style: italic; }
+  .hc-prem-callout {
+    margin-top: 22px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 18px 22px;
+    border-left: 4px solid var(--gold);
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .hc-prem-callout strong { color: var(--gold); font-weight: 600; }
+
+  /* Pathway mini-panel */
+  .hc-pathway-section {
+    margin-top: 36px;
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    padding: 26px 28px;
+  }
+  .hc-pathway-section h4 {
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-family: 'Antonio', sans-serif;
+  }
+  .hc-pathway-section .hc-pathway-sub {
+    font-size: 13px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.45;
+  }
+  .hc-pathway-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 18px;
+  }
+  .hc-pathway-step {
+    flex: 1;
+    background: var(--cream);
+    border: 1px solid var(--hairline-soft);
+    padding: 12px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .hc-pathway-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .hc-pathway-name {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .hc-pathway-asset {
+    margin-top: auto;
+    padding-top: 8px;
+    border-top: 1px dashed var(--hairline);
+    font-size: 11px;
+    color: var(--ink-mute);
+    line-height: 1.35;
+  }
+  .hc-pathway-asset strong {
+    display: block;
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    color: var(--accent);
+    letter-spacing: 0.16em;
+    margin-bottom: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .hc-pathway-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .hc-pathway-final {
+    background: var(--cream-deep);
+    border-left: 3px solid var(--navy);
+    padding: 12px 16px;
+    font-size: 13.5px;
+    color: var(--navy);
+    line-height: 1.45;
+    font-weight: 500;
+  }
+  .hc-pathway-final em { font-style: italic; color: var(--accent); }
+
+  @media (max-width: 960px) {
+    .hc-prem-grid { grid-template-columns: 1fr; }
+    .hc-prem-head { display: none; }
+    .hc-prem-cell { border-right: none; }
+    .hc-prem-cell.failure { border-top: 2px solid var(--accent); }
+    .hc-pathway-flow { flex-direction: column; }
+    .hc-pathway-arrow { width: auto; transform: rotate(90deg); height: 22px; }
+  }
+
   /* Flywheel */
   .hc-flywheel-section { margin-bottom: 56px; }
   .hc-flywheel-section h3 { font-size: 22px; color: var(--navy); margin-bottom: 6px; }
@@ -2256,7 +2650,7 @@
     <div class="title-block">
       <div>
         <div class="title-eyebrow">A Point of View</div>
-        <h1>From ambition <span class="light">to</span> [$X bn] in pet lifetime value.</h1>
+        <h1>From ambition <span class="light">to</span> <span class="hero-placeholder">[placeholder · $X bn]</span> in pet lifetime value.</h1>
         <p class="title-sub">A practitioner's read on how Mars Petcare can move <strong>health economics from concept to enterprise value</strong> — anchored in MVH, proven in one cohort, built to amplify divisions rather than replace them.</p>
       </div>
       <div class="pets-art">
@@ -2351,10 +2745,10 @@
 <section class="tab-panel active tab-section" id="t1">
   <div class="container">
 
-    <div class="pov-statement">
-      <div class="pov-label">Our point of view, in one paragraph</div>
+    <div class="pov-statement is-placeholder">
+      <div class="pov-label">Our point of view, in one paragraph <span class="pov-placeholder-badge">[placeholder · content to be revised]</span></div>
       <div class="pov-text">
-        The value Mars Petcare wants to create <em>already exists in the data</em>. It just does not yet show up in the P&amp;L, because divisions optimise their own moments rather than the pet's lifetime. The work ahead is not a strategy reset and not a transformation programme — it is <strong>building the operating rhythm that lets existing assets act as one</strong>. We would frame this as <strong>health economics with lifetime value as the operating KPI</strong>, anchor it in MVH, prove it in one senior-pet cohort, and design the cross-divisional incentive layer in parallel.
+        Most of the signals required to act on lifetime value already exist across Mars's divisions. They do not yet show up in the P&amp;L because divisions optimise their own moments rather than the pet's lifetime. The work is to build the operating rhythm that lets existing assets act as one — framed as <strong>health economics with lifetime value as the operating metric</strong>, tested first on the senior-pet cohort, with the cross-divisional incentive layer designed in parallel.
       </div>
     </div>
 
@@ -2362,34 +2756,34 @@
       <div class="story-blocks">
         <div class="story-block">
           <div class="story-block-head"><div class="story-block-num">01</div><div class="story-block-label">Where the value sits</div></div>
-          <h3>The data exists. The decisions don't follow it yet.</h3>
-          <p>Mars's prior internal exercise concluded the lifetime-value engine needs <strong>~11 data points</strong>, not millions. The data is <em>scattered, not absent</em>. The barrier is the orchestration that turns existing signals into cross-divisional decisions, and the incentive design that lets one division fund what another captures.</p>
+          <h3>Existing data is sufficient. The barrier is cross-divisional orchestration.</h3>
+          <p>Most of the signals required for a lifetime-value engine already exist across Mars's divisions — scattered across systems rather than absent. What needs building is the orchestration layer that turns existing signals into cross-divisional decisions, and the incentive design that lets one division fund what another captures.</p>
         </div>
         <div class="story-block">
           <div class="story-block-head"><div class="story-block-num">02</div><div class="story-block-label">Why this works</div></div>
-          <h3>Healthcare has done it. The mechanic transfers to Mars.</h3>
-          <p>Humana operates CLTV as an enterprise KPI across Medicare Advantage — delivering <strong>24.3% lower inpatient admissions, 13.4% fewer ED visits, and $12.8B in savings</strong> vs traditional Medicare. The same operating logic ports to Mars Petcare — and <em>no competitor has the full stack to run it</em>: Nutrition + Vet + Diagnostics + Science + Data, all under one P&amp;L.</p>
+          <h3>The healthcare operating model transfers to Mars Petcare.</h3>
+          <p>Humana operates CLTV as an enterprise KPI across Medicare Advantage, delivering <strong>24.3% lower inpatient admissions, 13.4% fewer ED visits, and $12.8B in savings</strong> versus traditional Medicare. The same operating logic ports to Mars Petcare, and no competitor has the full asset stack to run it: Nutrition, Vet, Diagnostics, Science and Data under one P&amp;L.</p>
         </div>
         <div class="story-block">
           <div class="story-block-head"><div class="story-block-num">03</div><div class="story-block-label">How we'd start</div></div>
-          <h3>Three moves to prove it in six months.</h3>
-          <p><strong>Anchor in MVH</strong> — deepest clinical touchpoints, first-party data, identity resolution. <strong>Prove the value tree on senior pets</strong> — one cohort, one market, pre-registered outcomes. <strong>Build the cross-divisional value ledger in parallel</strong> so divisions get credited for the ecosystem value they create. <em>Small enough to run, big enough to land.</em></p>
+          <h3>A six-month pilot designed to prove the model.</h3>
+          <p>The pilot would anchor in MVH — the deepest clinical touchpoints, first-party data and identity resolution sit here. The value tree would be tested on senior pets in a single market with pre-registered outcomes. The cross-divisional value ledger would run in parallel so divisions receive credit for the ecosystem value they create.</p>
         </div>
       </div>
 
       <div class="numbers-panel">
         <div class="numbers-panel-label">Illustrative · Senior pets</div>
-        <h2>What the value tree looks like when divisions act as one</h2>
-        <div class="num-row"><div class="num-big">$1,200</div><div class="num-cap">Baseline LTV today — fragmented care, leakage at every handoff</div></div>
-        <div class="num-row"><div class="num-big">$1,850</div><div class="num-cap">LTV when MVH + Royal Canin + Antech act as a connected pathway</div></div>
-        <div class="num-row"><div class="num-big plus">+$650</div><div class="num-cap">Ecosystem uplift per activated senior pet · ~54% gain</div></div>
-        <div class="num-row"><div class="num-big plus">+$7K</div><div class="num-cap">Implied per-Labrador uplift over two extra healthy years (illustrative $23K → $30K example)</div></div>
-        <div class="num-flag">Illustrative pilot economics from the WIP narrative. Placeholders to anchor the conversation — to be replaced with cohort-specific data once the pilot is scoped.</div>
+        <h2>Senior-pet LTV: fragmented today vs. coordinated pathway</h2>
+        <div class="num-row"><div class="num-big">$1,200</div><div class="num-cap">Baseline LTV today, with care fragmented across divisions</div></div>
+        <div class="num-row"><div class="num-big">$1,850</div><div class="num-cap">LTV when MVH, Royal Canin and Antech operate as a connected pathway</div></div>
+        <div class="num-row"><div class="num-big plus">+$650</div><div class="num-cap">Incremental per-pet LTV, approximately 54%</div></div>
+        <div class="num-row"><div class="num-big plus">+$7K</div><div class="num-cap">Implied per-Labrador uplift over two additional healthy years ($23K → $30K, illustrative)</div></div>
+        <div class="num-flag">Illustrative figures drawn from the WIP narrative. To be replaced with cohort-specific data once the pilot is scoped.</div>
       </div>
     </div>
 
     <div class="summary-handoff">
-      <p>The rest of this document is the <strong>thinking behind</strong> — the context that makes the window credible, where we'd start, the enablers required to make it work, and what we'd actually do in the first ninety days.</p>
+      <p>The remainder of this document sets out the context, the healthcare operating-model evidence and its implications for Mars, where the work would start, and the enablers required to make it operational.</p>
     </div>
 
   </div>
@@ -2399,13 +2793,13 @@
 <section class="tab-panel tab-section" id="t2">
   <div class="container">
     <div class="section-eyebrow">02 · The context</div>
-    <h2 class="section-title">Why we think this is <span class="light">a moment, not just an ambition.</span></h2>
-    <p class="section-lede">Mars's competitive position on pet lifetime value is unusual: the ingredients are all in-house, but no competitor — and no part of Mars itself — has assembled them yet. The window matters because <strong>narrower players are moving in narrower lanes</strong>, and the relationship layer that connects nutrition, care, diagnostics and science is the one piece nobody else can build.</p>
+    <h2 class="section-title">Why <span class="light">the timing matters for Mars Petcare.</span></h2>
+    <p class="section-lede">Mars's competitive position on pet lifetime value is unusual. The required assets all sit in-house, but no competitor has assembled them, and Mars Petcare has not yet operated them as a single system. Narrower players are advancing in narrower lanes; the relationship layer connecting nutrition, care, diagnostics and science remains the asset <strong>only Mars Petcare can build</strong>.</p>
 
     <div class="context-grid">
-      <div class="context-card"><div class="marker"></div><div class="context-card-num">01</div><h3>Only Mars owns the full stack</h3><p>Nutrition + Vet + Diagnostics + Science + Data all sit under one P&amp;L. <strong>No competitor has all five.</strong> The puzzle pieces exist — what's missing is the layer that connects them into one operating rhythm.</p></div>
-      <div class="context-card"><div class="marker"></div><div class="context-card-num">02</div><h3>Competitors have tried — and missed</h3><p>Zoetis attempted pet-level LTV in 2025 and could not assemble the data. Chewy, Trupanion and Petco have credible relationship economics — but only inside <strong>narrow lanes</strong>: retail, insurance, membership. None spans the full lifecycle.</p></div>
-      <div class="context-card"><div class="marker"></div><div class="context-card-num">03</div><h3>The data already exists</h3><p>Mars's prior internal exercise concluded the lifetime-value engine needs <strong>~11 data points</strong>. The data is scattered across systems, not absent. The barrier is the orchestration and the incentive design — both solvable in months, not years.</p></div>
+      <div class="context-card"><div class="marker"></div><div class="context-card-num">01</div><h3>Only Mars owns the full stack</h3><p>Nutrition, Vet, Diagnostics, Science and Data all sit under one P&amp;L. <strong>No competitor holds all five.</strong> What does not yet exist is the connecting layer that operates them as a single system.</p></div>
+      <div class="context-card"><div class="marker"></div><div class="context-card-num">02</div><h3>Competitor attempts to date</h3><p>Zoetis attempted pet-level LTV in 2025 and could not assemble the data. Chewy, Trupanion and Petco have credible relationship economics, but each operates within a single lane — retail, insurance, membership. None spans the full lifecycle.</p></div>
+      <div class="context-card"><div class="marker"></div><div class="context-card-num">03</div><h3>The data already exists</h3><p>Most signals required for a CLTV engine sit across Mars's divisions today — fragmented across systems, not absent. The barrier is orchestration and incentive design, both of which can be addressed in months rather than years.</p></div>
     </div>
 
     <div class="voice-block">
@@ -2426,7 +2820,7 @@
 
     <div class="asset-map">
       <h3>The five pieces of the stack, where they sit, what they do</h3>
-      <p class="asset-map-sub">No competitor holds more than two of these in one P&amp;L. This is the strategic asymmetry the operating rhythm has to monetise.</p>
+      <p class="asset-map-sub">No competitor holds more than two of these in a single P&amp;L. The operating rhythm is what converts this asset position into measurable value.</p>
       <div class="asset-grid">
         <div class="asset-cell"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#1F2C66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg><div class="name">Nutrition</div><div class="examples">Royal Canin, Pedigree, IAMS, Whiskas, Cesar</div></div>
         <div class="asset-cell"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#1F2C66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg><div class="name">Vet</div><div class="examples">Banfield, VCA, BluePearl, Linnaeus, AniCura</div></div>
@@ -2443,7 +2837,7 @@
   <div class="container">
     <div class="section-eyebrow">03 · Healthcare model lens · learnings → implications</div>
     <h2 class="section-title">What other models teach us <span class="light">— and what it implies for Mars.</span></h2>
-    <p class="section-lede">This tab is the <strong>evidence and the implications</strong>. The plan for Mars — where to anchor, how to operate, what to prove — lives in <strong>Where to start (Tab 04 →)</strong>. Lifetime value as an enterprise operating model has been built most completely <strong>not in pharma, but in integrated payers and value-based care</strong>. Pharma teaches the predictive lens. Pet insurance teaches formula discipline. The honest finding: <strong>no public case shows a multi-division pet ecosystem operating CLTV at scale</strong> — Mars's opportunity is to be the first.</p>
+    <p class="section-lede">This tab covers the evidence and the implications. The plan for Mars — where to anchor, how to operate, what to prove — sits in <strong>Where to start (Tab 04 →)</strong>. Lifetime value as an enterprise operating model has been built most completely in <strong>integrated payers and value-based care, not in pharma</strong>. Pharma contributes the predictive lens. Pet insurance contributes formula discipline. <strong>No public case shows a multi-division pet ecosystem operating CLTV at scale</strong> — Mars Petcare can be the first.</p>
 
     <!-- Mini in-tab navigation -->
     <div class="hc-mini-nav">
@@ -2468,11 +2862,11 @@
       <div class="hc-drawer-content" id="hc-summary-content">
         <div class="hc-drawer-content-inner">
           <div class="hc-summary-body">
-            <p><strong>The honest finding.</strong> Lifetime value as an enterprise operating model has been built most completely in healthcare — and within healthcare, in integrated payers and value-based care, not pharma. The strongest published case is Humana's Medicare Advantage operating model.</p>
-            <p><strong>Humana</strong> operates explicit CLTV and NPV per member, using both to allocate acquisition spend, design retention programmes, and price products to sustainable margin. Patients in its value-based care arrangements show <strong>24.3% lower inpatient admissions, 13.4% fewer ED visits</strong>, and an estimated <strong>$12.8B in savings</strong> versus traditional Medicare. The formula isn't the breakthrough — connecting the formula to operating decisions is.</p>
-            <p><strong>AstraZeneca</strong> provides the predictive lens. Its MILTON model predicts disease risk up to 15 years before clinical diagnosis across 1,000+ conditions, integrating de-identified records with genetic and protein data. Pharma doesn't publish full CLTV operating models the way payers do — but the early-intervention logic is directly transferable to senior-pet risk scoring.</p>
-            <p><strong>Trupanion</strong> provides the formula discipline at the pet level. Explicit profit CLTV per pet, PAC ~$315, monthly retention 98.25–98.4%, with acquisition spend adjusted in near-real time against cohort IRR. But Trupanion is insurance — a contractual single-product model — not a multi-division ecosystem like Mars.</p>
-            <p><strong>The translation for Mars.</strong> Keep divisional P&amp;Ls intact. Build a shadow value ledger. Risk-stratify the senior-pet cohort. Run test/control with pre-registered outcomes. Use leading indicators — adherence, screening uptake — to inform forward LTV. The model isn't the moat. The operating rhythm is.</p>
+            <p><strong>The finding.</strong> Lifetime value as an enterprise operating model has been built most completely in healthcare — and within healthcare, in integrated payers and value-based care rather than pharma. The strongest published case is Humana's Medicare Advantage operating model.</p>
+            <p><strong>Humana</strong> operates explicit CLTV and NPV per member, using both to allocate acquisition spend, design retention programmes, and price products to sustainable margin. Patients in its value-based care arrangements show <strong>24.3% lower inpatient admissions, 13.4% fewer ED visits</strong>, and an estimated <strong>$12.8B in savings</strong> versus traditional Medicare. The transferable lesson is the connection between the formula and day-to-day operating decisions.</p>
+            <p><strong>AstraZeneca</strong> provides the predictive lens. Its MILTON model predicts disease risk up to 15 years before clinical diagnosis across 1,000+ conditions, integrating de-identified records with genetic and protein data. Pharma does not publish full CLTV operating models the way payers do, but the early-intervention logic is directly transferable to senior-pet risk scoring.</p>
+            <p><strong>Trupanion</strong> provides the formula discipline at the pet level. Explicit profit CLTV per pet, PAC ~$315, monthly retention 98.25–98.4%, with acquisition spend adjusted in near-real time against cohort IRR. Trupanion is an insurance model — a contractual single-product structure — which does not translate to a multi-division ecosystem.</p>
+            <p><strong>Translated for Mars.</strong> Keep divisional P&amp;Ls intact. Build a shadow value ledger. Risk-stratify the senior-pet cohort. Run test/control with pre-registered outcomes. Use leading indicators (adherence, screening uptake) to inform forward LTV. Defensibility comes from the operating rhythm, which is harder to replicate than the model itself.</p>
           </div>
         </div>
       </div>
@@ -2482,7 +2876,7 @@
     <div class="hc-finding" id="hc-finding">
       <div class="hc-finding-eyebrow">The executive finding</div>
       <h3>Healthcare LTV only works when the formula changes the operating model.</h3>
-      <p>The strongest published parallel is <strong>not pure pharma</strong>. It is integrated healthcare / payer value-based care, where lifetime value, prevention, retention, care quality and cost-to-serve are wired into <strong>day-to-day decisions</strong> — not just reported in earnings calls.</p>
+      <p>The strongest published parallel is integrated healthcare and payer value-based care, rather than pharma. In these models, lifetime value, prevention, retention, care quality and cost-to-serve are wired into <strong>day-to-day operating decisions</strong>.</p>
     </div>
 
     <!-- SECTION B: THREE CASES -->
@@ -2543,7 +2937,7 @@
         </ul>
         <div class="hc-case-take">
           <span class="hc-take-label">What Mars takes from this</span>
-          <p>The <strong>pet-level formula discipline</strong> is portable — clear unit, clear acquisition cost, clear retention. The single-product structure isn't what Mars needs to copy.</p>
+          <p>The <strong>pet-level formula discipline</strong> is portable for Mars: clear unit, clear acquisition cost, clear retention. The single-product structure does not translate to a multi-division ecosystem.</p>
         </div>
       </div>
 
@@ -2551,74 +2945,68 @@
 
     <!-- SECTION C: FORMULA BUILDER -->
     <div class="hc-formula-section" id="hc-formula">
-      <h3>The formula is simple. <span style="color:var(--accent);">Making every term operational is the hard part.</span></h3>
-      <p class="hc-sub">Same skeleton, two different worlds. Below: how payers express it. Below that: the same logic translated for Mars Petcare. Each term in brackets is a decision that has to be operationalised — not just calculated.</p>
+      <h3>The healthcare formula, and its Mars translation.</h3>
+      <p class="hc-sub">Left: the customer-NPV formula payers like Humana use. Right: the same structure with Mars Petcare's value drivers substituted in. Each term represents an operational decision, not just a number to calculate.</p>
 
-      <!-- HEALTHCARE FORMULA -->
-      <div class="hc-formula-card healthcare">
-        <div class="hc-formula-label">Healthcare · Customer NPV</div>
-        <h4>What payers like Humana actually optimise against</h4>
-        <div class="hc-formula-flow">
-          <span class="hc-term minus"><span class="sign">−</span>Acquisition cost</span>
-          <span class="hc-term minus"><span class="sign">−</span>Onboarding cost</span>
-          <span class="hc-term sum">+ Σ future years</span>
-        </div>
-        <div class="hc-formula-group">
-          <div class="hc-formula-flow">
-            <span class="hc-term retention">Retention probability ×</span>
-            <span class="hc-term plus"><span class="sign">+</span>Premium / service contribution</span>
-            <span class="hc-term plus"><span class="sign">+</span>Quality economics</span>
-            <span class="hc-term minus"><span class="sign">−</span>Expected claims &amp; care cost</span>
-            <span class="hc-term minus"><span class="sign">−</span>Provider payments</span>
-            <span class="hc-term minus"><span class="sign">−</span>Care management cost</span>
-            <span class="hc-term minus"><span class="sign">−</span>Admin cost</span>
-          </div>
-          <div class="hc-formula-flow" style="margin-top:8px;">
-            <span class="hc-term div">÷ Discount factor</span>
-          </div>
-        </div>
-      </div>
+      <div class="hc-formula-compare">
 
-      <!-- MARS TRANSLATION -->
-      <div class="hc-formula-card mars">
-        <div class="hc-formula-label">Mars Petcare translation · Pet-parent household NPV</div>
-        <h4>Same skeleton — Mars's terms substituted in</h4>
-        <div class="hc-formula-flow">
-          <span class="hc-term minus"><span class="sign">−</span>Acquisition / onboarding cost</span>
-          <span class="hc-term sum">+ Σ by pet life stage</span>
-        </div>
-        <div class="hc-formula-group">
-          <div class="hc-formula-flow">
-            <span class="hc-term retention">Relationship retention ×</span>
-            <span class="hc-term plus"><span class="sign">+</span>Nutrition contribution</span>
-            <span class="hc-term plus"><span class="sign">+</span>Vet care contribution</span>
-            <span class="hc-term plus"><span class="sign">+</span>Diagnostics contribution</span>
-            <span class="hc-term plus"><span class="sign">+</span>Services contribution</span>
-            <span class="hc-term minus"><span class="sign">−</span>Clinical labour</span>
-            <span class="hc-term minus"><span class="sign">−</span>Intervention cost</span>
-            <span class="hc-term minus"><span class="sign">−</span>Fulfilment / support cost</span>
+        <!-- HEALTHCARE FORMULA (vertical) -->
+        <div class="hc-fvert healthcare">
+          <div class="hc-fvert-eyebrow">Healthcare · Customer NPV</div>
+          <div class="hc-fvert-title">What payers like Humana optimise against</div>
+          <div class="hc-fvert-eq">=</div>
+          <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Acquisition cost</span></div>
+          <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Onboarding cost</span></div>
+          <div class="hc-fvert-line no-line"><span class="hc-fvert-op sum">Σ</span><span class="hc-fvert-term lead">Over future years</span></div>
+          <div class="hc-fvert-group">
+            <div class="hc-fvert-line no-line"><span class="hc-fvert-op">×</span><span class="hc-fvert-term lead">Retention probability</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op plus">+</span><span class="hc-fvert-term">Premium / service contribution</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op plus">+</span><span class="hc-fvert-term">Quality economics</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Expected claims &amp; care cost</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Provider payments</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Care management cost</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Admin cost</span></div>
           </div>
-          <div class="hc-formula-flow" style="margin-top:8px;">
-            <span class="hc-term div">÷ Discount factor</span>
-          </div>
+          <div class="hc-fvert-line"><span class="hc-fvert-op div">÷</span><span class="hc-fvert-term">Discount factor</span></div>
         </div>
+
+        <!-- MARS TRANSLATION (vertical) -->
+        <div class="hc-fvert mars">
+          <div class="hc-fvert-eyebrow">Mars Petcare · Pet-parent household NPV</div>
+          <div class="hc-fvert-title">Same skeleton — Mars's terms substituted in</div>
+          <div class="hc-fvert-eq">=</div>
+          <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Acquisition / onboarding cost</span></div>
+          <div class="hc-fvert-line no-line"><span class="hc-fvert-op sum">Σ</span><span class="hc-fvert-term lead">By pet life stage</span></div>
+          <div class="hc-fvert-group">
+            <div class="hc-fvert-line no-line"><span class="hc-fvert-op">×</span><span class="hc-fvert-term lead">Relationship retention</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op plus">+</span><span class="hc-fvert-term">Nutrition contribution</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op plus">+</span><span class="hc-fvert-term">Vet care contribution</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op plus">+</span><span class="hc-fvert-term">Diagnostics contribution</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op plus">+</span><span class="hc-fvert-term">Services contribution</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Clinical labour</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Intervention cost</span></div>
+            <div class="hc-fvert-line"><span class="hc-fvert-op minus">−</span><span class="hc-fvert-term">Fulfilment / support cost</span></div>
+          </div>
+          <div class="hc-fvert-line"><span class="hc-fvert-op div">÷</span><span class="hc-fvert-term">Discount factor</span></div>
+        </div>
+
       </div>
 
       <div class="hc-formula-callout">
-        <p>The strategic question is not <em>"can we calculate this?"</em> It is <em>"which decisions will this calculation change?"</em></p>
+        <p>The relevant test is which operating decisions this calculation should change.</p>
       </div>
     </div>
 
-    <!-- SECTION D: FRONT / BACK -->
+    <!-- SECTION D: OPERATING ENGINE -->
     <div class="hc-frontback-section" id="hc-frontback">
-      <h3>A sequential front-end. A parallel, coordinated back-end.</h3>
-      <p class="hc-sub">The asymmetry is the insight: the customer experiences five moments <em>in sequence</em>. The back-end runs <em>in parallel</em> — six engines coordinating with each other to support every front-end moment, aligned by a value-based contract.</p>
+      <h3>Five moments in sequence. Six capabilities in parallel.</h3>
+      <p class="hc-sub">The moments at the customer surface run sequentially. The engine that powers them runs as a parallel mesh — six capabilities coordinating continuously, aligned by a value-based contract.</p>
 
       <div class="hc-frontback">
 
-        <!-- FRONT-END (sequential flow) -->
+        <!-- LEFT: customer-facing moments, sequential -->
         <div class="hc-fb-col front">
-          <div class="hc-fb-title">Front end — what the member experiences <span class="hc-fb-meta">· in sequence</span></div>
+          <div class="hc-fb-title">Customer-facing moments <span class="hc-fb-meta">· sequential</span></div>
           <div class="hc-flow-list">
             <div class="hc-fb-node"><div class="hc-fb-num">1</div><div><strong style="color:var(--navy);">Join / choose plan</strong><br><span style="color:var(--ink-mute);font-size:12.5px;">Simple enrolment, transparent benefits</span></div></div>
             <div class="hc-flow-arrow" aria-hidden="true">↓</div>
@@ -2637,41 +3025,40 @@
           <span class="hc-fb-bridge-text">VALUE-BASED<br>CARE CONTRACT</span>
         </div>
 
-        <!-- BACK-END (parallel mesh) -->
+        <!-- RIGHT: operating engine, parallel mesh -->
         <div class="hc-fb-col back">
-          <div class="hc-fb-title">Back end — what makes it work <span class="hc-fb-meta">· in parallel, always coordinating</span></div>
+          <div class="hc-fb-title">Operating engine <span class="hc-fb-meta">· parallel, always coordinating</span></div>
           <div class="hc-mesh-grid">
-            <div class="hc-mesh-node" data-id="A">
+            <div class="hc-mesh-node">
               <div class="hc-mesh-num">1</div>
               <strong>Risk stratification</strong>
               <span>Predict who needs what, when</span>
             </div>
-            <div class="hc-mesh-node" data-id="B">
+            <div class="hc-mesh-node">
               <div class="hc-mesh-num">2</div>
               <strong>Care-gap analytics</strong>
               <span>Detect missed screenings &amp; gaps</span>
             </div>
-            <div class="hc-mesh-node" data-id="C">
+            <div class="hc-mesh-node">
               <div class="hc-mesh-num">3</div>
               <strong>Provider contracts &amp; incentives</strong>
               <span>Aligned economics across the system</span>
             </div>
-            <div class="hc-mesh-node" data-id="D">
+            <div class="hc-mesh-node">
               <div class="hc-mesh-num">4</div>
               <strong>Care teams &amp; workflows</strong>
               <span>Embedded humans, not just dashboards</span>
             </div>
-            <div class="hc-mesh-node" data-id="E">
+            <div class="hc-mesh-node">
               <div class="hc-mesh-num">5</div>
               <strong>Data liquidity</strong>
               <span>Identity resolution + longitudinal record</span>
             </div>
-            <div class="hc-mesh-node" data-id="F">
+            <div class="hc-mesh-node">
               <div class="hc-mesh-num">6</div>
               <strong>Outcome &amp; cost measurement</strong>
               <span>Closed loop back to acquisition</span>
             </div>
-            <!-- Connecting mesh lines (SVG overlay) -->
             <svg class="hc-mesh-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
               <line x1="33" y1="20" x2="33" y2="80" stroke="rgba(232,181,58,0.35)" stroke-width="0.6" stroke-dasharray="1 1.5"/>
               <line x1="66" y1="20" x2="66" y2="80" stroke="rgba(232,181,58,0.35)" stroke-width="0.6" stroke-dasharray="1 1.5"/>
@@ -2679,7 +3066,7 @@
               <line x1="15" y1="66" x2="85" y2="66" stroke="rgba(232,181,58,0.35)" stroke-width="0.6" stroke-dasharray="1 1.5"/>
             </svg>
           </div>
-          <div class="hc-mesh-caption">All six engines feed each other continuously. The risk score informs care gaps; care teams update the longitudinal record; outcomes recalibrate contracts. <strong>None of them is sequential — they're a shared operating layer.</strong></div>
+          <div class="hc-mesh-caption">All six feed each other continuously. Risk informs care gaps; care teams update the record; outcomes recalibrate contracts. <strong>None is sequential — it's a shared operating layer.</strong></div>
         </div>
 
       </div>
@@ -2690,69 +3077,63 @@
       </div>
     </div>
 
-    <!-- SECTION E: BOTTLENECK HEATMAP -->
-    <div class="hc-bottleneck-section" id="hc-bottlenecks">
-      <h3>Seven failure modes every model hits — and what prevents each one</h3>
-      <p class="hc-sub">Roche dissolved its personalised healthcare centre when ROI proved too ambiguous. Kaiser's Group Health tech integration went from $40M to $600M. These failure modes are well-documented — and each one has a known enabler that prevents it.</p>
+    <!-- SECTION E: FAILURE MODES → MARS DESIGN REQUIREMENTS -->
+    <div class="hc-prem-section" id="hc-bottlenecks">
+      <h3>Seven challenges healthcare has hit. Seven implications for Mars.</h3>
+      <p class="hc-sub">Each failure mode has been documented across payers, pharma and integrated systems. Each one implies a specific design choice for Mars — and a specific way to test it in the pilot.</p>
 
-      <div class="hc-bottlenecks-grid">
-
-        <div class="hc-bottleneck-card high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">High</span>
-          <h5>Value attribution across silos</h5>
-          <p class="hc-why">One division may fund the intervention while another captures the value. Without attribution rules, the intervention never gets funded.</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>Shadow value ledger before incentives are hardwired</div>
+      <div class="hc-prem-grid">
+        <div class="hc-prem-head">
+          <div class="failure">Challenge in healthcare</div>
+          <div class="design">Implication for Mars</div>
+          <div class="proof">Pilot proof</div>
         </div>
 
-        <div class="hc-bottleneck-card high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">High</span>
-          <h5>Data fragmentation</h5>
-          <p class="hc-why">Pet, parent, household, clinic, diagnostics, nutrition and retail data rarely connect cleanly — the same scattering pattern as healthcare pre-FHIR.</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>11-point data spine — not a data lake build-out</div>
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure">Value attribution across silos</div>
+          <div class="hc-prem-cell design"><strong>Shadow value ledger before scale</strong></div>
+          <div class="hc-prem-cell proof">Show who funds, who acts, who captures value, and where enterprise uplift lands.</div>
         </div>
 
-        <div class="hc-bottleneck-card high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">High</span>
-          <h5>Incentive misalignment</h5>
-          <p class="hc-why">Teams optimise their own P&amp;L unless shared enterprise value is visible AND rewarded — the President's own OGSM diagnosis.</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>Cross-divisional credit rules signed before pilot starts</div>
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure">Data fragmentation</div>
+          <div class="hc-prem-cell design"><strong>Minimum viable data spine, not a data lake</strong></div>
+          <div class="hc-prem-cell proof">Link one cohort across pet, parent, clinic, diagnostics and nutrition signals.</div>
         </div>
 
-        <div class="hc-bottleneck-card high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">High</span>
-          <h5>Clinical trust risk</h5>
-          <p class="hc-why">Vets must never feel like cross-sell channels. Clinical independence is non-negotiable — and audited by regulators (UK CMA precedent).</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>Pre-registered outcomes + independent ethics review</div>
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure">Incentive misalignment</div>
+          <div class="hc-prem-cell design"><strong>Credit rules before incentives</strong></div>
+          <div class="hc-prem-cell proof">Divisions agree value-recognition rules before pilot launch.</div>
         </div>
 
-        <div class="hc-bottleneck-card med-high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">Medium / High</span>
-          <h5>Causal proof</h5>
-          <p class="hc-why">Healthier, more engaged customers may already have higher LTV. Selection bias makes adherence-LTV correlations look stronger than they are.</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>Test/control design with matched controls</div>
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure">Clinical trust risk</div>
+          <div class="hc-prem-cell design"><strong>Vet-first workflow + independent guardrails</strong></div>
+          <div class="hc-prem-cell proof">Recommendations support clinical judgement and never become sales prompts.</div>
         </div>
 
-        <div class="hc-bottleneck-card med-high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">Medium / High</span>
-          <h5>Time to value</h5>
-          <p class="hc-why">Health outcomes and LTV unfold over years. Without leading indicators, programmes get cut before the value lands.</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>Leading indicators (adherence, uptake) + forward CLTV model</div>
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure med-high">Causal proof (selection bias)</div>
+          <div class="hc-prem-cell design"><strong>Test/control measurement</strong></div>
+          <div class="hc-prem-cell proof">Demonstrate incremental uplift versus matched controls, not just correlation.</div>
         </div>
 
-        <div class="hc-bottleneck-card med-high">
-          <span class="hc-sev-bar"></span>
-          <span class="hc-sev-chip">Medium / High</span>
-          <h5>Privacy &amp; consent</h5>
-          <p class="hc-why">Pet health data may not be regulated like human health data — but it is emotionally sensitive. Pet parents react sharply to "surveillance."</p>
-          <div class="hc-fix"><span class="hc-fix-label">Enabler</span>Consent-by-design — purpose-specified, granular, re-usable</div>
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure med-high">Time to value</div>
+          <div class="hc-prem-cell design"><strong>Leading indicators + forward CLTV model</strong></div>
+          <div class="hc-prem-cell proof">Use 90-day adherence and uptake to inform a 36-month value model.</div>
         </div>
 
+        <div class="hc-prem-row">
+          <div class="hc-prem-cell failure med-high">Privacy &amp; consent</div>
+          <div class="hc-prem-cell design"><strong>Consent-by-design</strong></div>
+          <div class="hc-prem-cell proof">Pet parents understand the value exchange and can control data use.</div>
+        </div>
+      </div>
+
+      <div class="hc-prem-callout">
+        <strong>The implication: start with one controlled lifecycle pathway that exercises the full operating model end-to-end</strong>, rather than an enterprise data programme.
       </div>
     </div>
 
@@ -2852,9 +3233,9 @@
       <div class="hc-handoff-eyebrow">Implications for Mars — what we take forward</div>
       <h3>Three things the evidence tells us. <span class="accent">The plan that follows is in Where to start →</span></h3>
       <ul class="hc-handoff-list">
-        <li><strong>01 · Operating system, not metric</strong>Lifetime value has to change which interventions get funded, which teams act, and how value is attributed across divisions. Otherwise it's a slide.</li>
-        <li><strong>02 · Risk stratification is the engine</strong>The prevention economics work when you can identify earlier intervention windows. Senior-pet risk scoring is the most testable translation.</li>
-        <li><strong>03 · The ledger is the unlock</strong>Every healthcare case's success or failure traces back to incentive alignment. Mars's equivalent of the payer-provider contract is a cross-divisional value ledger.</li>
+        <li><strong>01 · Lifetime value as enterprise operating system</strong>Lifetime value has to change which interventions get funded, which teams act, and how value is attributed across divisions.</li>
+        <li><strong>02 · Risk stratification drives prevention economics</strong>The economics work when earlier intervention windows can be identified. Senior-pet risk scoring is the most testable translation.</li>
+        <li><strong>03 · Cross-divisional value attribution</strong>Every healthcare case's success or failure traces back to incentive alignment. Mars's equivalent of the payer-provider contract is a cross-divisional value ledger.</li>
       </ul>
       <button class="hc-handoff-cta" onclick="document.querySelector('[data-tab=&quot;t4&quot;]').click()">See: Where to start</button>
     </div>
@@ -2884,8 +3265,8 @@
 <section class="tab-panel tab-section" id="t4">
   <div class="container">
     <div class="section-eyebrow">04 · Where to start · the plan for Mars</div>
-    <h2 class="section-title">From learnings to plan <span class="light">— where we'd anchor Mars today.</span></h2>
-    <p class="section-lede">Tab 3 showed what other models teach us. <strong>This is the Mars version.</strong> Four directions remain on the table — but the evidence behind us makes the case to anchor on <strong>health economics today, with lifecycle stewardship as the horizon</strong>. Here's how we'd activate that.</p>
+    <h2 class="section-title">The plan for <span class="light">Mars Petcare.</span></h2>
+    <p class="section-lede">Tab 3 covered what other operating models teach. This tab translates that into a plan for Mars Petcare. Four strategic directions remain on the table; the evidence supports anchoring on <strong>health economics now, with lifecycle stewardship as the longer-term ambition</strong>. The pages that follow describe how this would operate.</p>
 
     <div class="lean-intro">
       <h3>Where we'd start — and why</h3>
@@ -3005,7 +3386,7 @@
 
             <rect x="40" y="0" width="160" height="34" fill="#B81810"/>
             <text x="120" y="20" text-anchor="middle" font-family="Antonio, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">SIGNAL IN</text>
-            <text x="120" y="32" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9" fill="#F4D78A">~11 data points · consented</text>
+            <text x="120" y="32" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9" fill="#F4D78A">Minimum signal set · consented</text>
           </g>
         </svg>
       </div>
@@ -3067,13 +3448,13 @@
 
     <!-- Principles -->
     <div class="principles-section">
-      <h3>Four operating principles we'd hold to</h3>
-      <p class="framing-section-sub">These are the design choices that — in our experience — separate health-economics models that work from ones that stall.</p>
+      <h3>Four operating principles</h3>
+      <p class="framing-section-sub">These are the design choices that, in our experience, materially affect whether health-economics models reach scale.</p>
       <div class="principles-grid">
         <div class="principle"><div class="principle-mark">PRINCIPLE 01</div><h4>Anchor in MVH — depth, frequency, first-party data</h4><p>MVH is the only Mars asset with clinical depth, identity resolution and recurring touchpoints in the same place. <strong>Start the value tree where the cause-and-effect logic is cleanest.</strong> Let signals flow outward to Royal Canin, Pet Nutrition and partners.</p></div>
         <div class="principle"><div class="principle-mark">PRINCIPLE 02</div><h4>Run backstage, not frontstage</h4><p>Divisions keep their brands and P&amp;Ls. <strong>The ecosystem orchestrates behind the scenes</strong> — a data spine, a shared signal model, a value ledger. No consumer-facing brand consolidation, no organisational reset.</p></div>
         <div class="principle"><div class="principle-mark">PRINCIPLE 03</div><h4>Incentives travel with the journey, not the division</h4><p>Previous OGSMs failed on mismatched incentives — the President's own diagnosis. <strong>A cross-divisional value ledger</strong> is the smallest mechanism that rewards enterprise value without breaking divisional accountability. Design it before scaling.</p></div>
-        <div class="principle"><div class="principle-mark">PRINCIPLE 04</div><h4>Build the eleven, not the lake</h4><p>The internal exercise has already established ~11 data points are sufficient to trigger ecosystem action. <strong>Start there.</strong> A unified 360 view is necessary eventually but not first — value moments come before data architecture, or data becomes the work.</p></div>
+        <div class="principle"><div class="principle-mark">PRINCIPLE 04</div><h4>Build the minimum signal set, not the data lake</h4><p>The signal set sufficient to trigger ecosystem action is small. A unified 360 view is necessary eventually, but not first — building the data architecture ahead of the value moments turns data itself into the work.</p></div>
       </div>
     </div>
 
@@ -3084,13 +3465,13 @@
 
       <div class="pilot-frame">
         <div class="pilot-name">Senior Pet Proactive Health Pathway</div>
-        <p class="pilot-pitch">A controlled cohort proving that a coordinated MVH + Royal Canin + Antech intervention measurably improves outcomes AND lifetime value.</p>
+        <p class="pilot-pitch">A controlled cohort testing whether a coordinated MVH, Royal Canin and Antech intervention measurably improves outcomes and lifetime value.</p>
 
         <div class="pilot-specs">
           <div class="spec"><div class="spec-label">Cohort</div><div class="spec-value">Dogs entering senior life-stage (7+ for medium-large breeds). <strong>10,000–30,000 pets</strong>, test vs control.</div></div>
           <div class="spec"><div class="spec-label">Scope</div><div class="spec-value"><strong>One market</strong>, end-to-end: identification → baseline → diagnostics → care plan → adherence → follow-up.</div></div>
           <div class="spec"><div class="spec-label">Duration</div><div class="spec-value"><strong>6-month operational read</strong>, with a 36-month LTV trajectory model layered on top.</div></div>
-          <div class="spec"><div class="spec-label">Investment</div><div class="spec-value">Low single-digit-millions USD — small for a pilot of this strategic weight.</div></div>
+          <div class="spec"><div class="spec-label">Investment</div><div class="spec-value">Low single-digit-millions USD.</div></div>
         </div>
 
         <div class="waterfall-wrap">
@@ -3110,7 +3491,7 @@
           </div>
         </div>
 
-        <div class="pilot-readout"><p><strong>The pilot's first job is not financial — it is to prove the value tree closes across divisions.</strong> A defensible, externally credible result here becomes the reference case for everything that follows: the framing for cross-divisional incentives, the basis for the data architecture, and the proof point Mars can take to its own associates and to the market. <em>Numbers above are illustrative; the pilot will produce the real ones.</em></p></div>
+        <div class="pilot-readout"><p>The pilot's primary purpose is to demonstrate that the value tree closes across divisions. A defensible, externally credible result here would become the reference case for the cross-divisional incentive design, the data architecture and the proof point Mars Petcare can take to its own associates and to the market. <em>Numbers above are illustrative; the pilot will produce the actual ones.</em></p></div>
       </div>
     </div>
   </div>
@@ -3121,7 +3502,7 @@
   <div class="container">
     <div class="section-eyebrow">05 · Enablers</div>
     <h2 class="section-title">People, process, tech — <span class="light">what has to be true for this to work.</span></h2>
-    <p class="section-lede">The pilot is the proof point. These three layers — people, process and technology — are what make the proof point a system. <strong>None of them needs to be perfect at the start.</strong> Each one needs a defensible v0 by the time the pilot reads results, so the scale decision has something real to attach to.</p>
+    <p class="section-lede">The pilot produces the result. These three layers — people, process and technology — are what allow that result to scale. None of them needs to be complete at the start; each requires a defensible v0 by the time the pilot reports, so the scale decision can be made against real evidence.</p>
 
     <!-- Three enabler pills -->
     <div class="enabler-pills">
@@ -3129,12 +3510,12 @@
       <div class="enabler-card people">
         <div class="enabler-tag">● PEOPLE</div>
         <h3>A small core team, healthcare-fluent</h3>
-        <p class="head-sub">The President's leadership team is 6/8 from healthcare — leverage that gravity, don't fight it.</p>
+        <p class="head-sub">The President's leadership team is drawn largely from healthcare — a structural advantage when bringing health-economics methods inside.</p>
         <ul class="enabler-list">
           <li><div class="pill">01</div><div class="text"><strong>Executive sponsor</strong>From President's office — owns the agenda, unblocks division friction, signs the framing memo.</div></li>
           <li><div class="pill">02</div><div class="text"><strong>MVH clinical lead</strong>Protects clinical integrity, owns the workflow design, signs off on pre-registered outcomes.</div></li>
           <li><div class="pill">03</div><div class="text"><strong>Cross-divisional ops lead</strong>Sits across Royal Canin + Antech + MVH — designs the joined-up pathway, owns delivery.</div></li>
-          <li><div class="pill">04</div><div class="text"><strong>Data &amp; ledger lead</strong>From CFO office — owns the 11 data points, the value ledger v0, and attribution rules.</div></li>
+          <li><div class="pill">04</div><div class="text"><strong>Data &amp; ledger lead</strong>From CFO office — owns the data spine, the value ledger v0, and attribution rules.</div></li>
           <li><div class="pill">05</div><div class="text"><strong>Independent ethics adviser</strong>External voice on welfare, consent, clinical autonomy. Non-optional.</div></li>
         </ul>
       </div>
@@ -3142,7 +3523,7 @@
       <div class="enabler-card process">
         <div class="enabler-tag">● PROCESS</div>
         <h3>Decisions that travel with the journey</h3>
-        <p class="head-sub">The OGSM lesson: clear rights, clear cadence, clear value attribution — or it stalls.</p>
+        <p class="head-sub">The OGSM lesson: process holds when decision rights, cadence and value attribution are explicit from the start.</p>
         <ul class="enabler-list">
           <li><div class="pill">01</div><div class="text"><strong>Decision rights matrix</strong>Who decides what at framing, pilot scoping, launch, and scale gates. Signed before scoping starts.</div></li>
           <li><div class="pill">02</div><div class="text"><strong>Pre-registered outcomes</strong>Clinical, commercial and welfare metrics locked before the pilot runs. Prevents result-shopping.</div></li>
@@ -3154,11 +3535,11 @@
 
       <div class="enabler-card tech">
         <div class="enabler-tag">● TECH</div>
-        <h3>Build the 11, not the lake</h3>
-        <p class="head-sub">Minimum viable data stack that triggers action. The 360 view comes after the value moments are proven.</p>
+        <h3>A minimum viable data stack, not a lake</h3>
+        <p class="head-sub">A defensible v0 of the data stack that is sufficient to trigger action. A unified 360 view follows the value moments rather than precedes them.</p>
         <ul class="enabler-list">
           <li><div class="pill">01</div><div class="text"><strong>Identity resolution layer</strong>Link pet across MVH, Royal Canin, Antech, Kinship records. Pet-parent household as anchor.</div></li>
-          <li><div class="pill">02</div><div class="text"><strong>11-point data spine</strong>The minimum signal set: age, breed, weight, history, diagnostics, nutrition, engagement, risk. Live, not perfect.</div></li>
+          <li><div class="pill">02</div><div class="text"><strong>Minimum viable data spine</strong>The signal set linked: age, breed, weight, history, diagnostics, nutrition, engagement, risk. Live, not perfect.</div></li>
           <li><div class="pill">03</div><div class="text"><strong>Decisioning &amp; triggers</strong>Lightweight rule engine that flags lifecycle moments (senior threshold, diagnostic alert, adherence drop).</div></li>
           <li><div class="pill">04</div><div class="text"><strong>Consent management</strong>Granular, purpose-specified consent — re-usable across divisions, designed for pet-parent trust.</div></li>
           <li><div class="pill">05</div><div class="text"><strong>Ecosystem LTV dashboard</strong>Per-pet contribution view across divisions. Powers the value ledger and the scale decision.</div></li>
@@ -3348,14 +3729,14 @@
     </div>
 
     <div class="watch-section" style="margin-top:56px;">
-      <h3>Honest watch-outs as we activate</h3>
+      <h3>Watch-outs to plan for</h3>
       <p class="sub">These are the failure modes we'd design the enablers against. None are theoretical — each one has played out in adjacent industries when this kind of work loses momentum.</p>
       <div class="watch-grid">
         <div class="watch-item"><div class="watch-icon">!</div><div><h5>Clinical trust comes first</h5><p>Vets must not feel like cross-sell channels. <strong>Clinical judgement leads; decisioning supports.</strong> The pilot includes independent ethics review and pre-registered outcomes — these are non-negotiable.</p></div></div>
         <div class="watch-item"><div class="watch-icon">!</div><div><h5>The "360 view" trap</h5><p>Unified data is necessary but not sufficient. <strong>Value moments come before data architecture</strong>, or the project becomes data plumbing and never produces a result.</p></div></div>
         <div class="watch-item"><div class="watch-icon">!</div><div><h5>Pet-parent data sensitivity</h5><p>Pet data carries emotional weight beyond standard CPG. <strong>Consent-by-design is a capability, not an add-on.</strong> Plan for it before personalisation gets perceived as surveillance.</p></div></div>
         <div class="watch-item"><div class="watch-icon">!</div><div><h5>UK CMA &amp; regulatory backdrop</h5><p>The March 2026 binding reforms (price transparency, prescription fee caps, ownership disclosure) shape the trust environment. <strong>LTV has to be earned through better outcomes</strong>, not opaque pricing.</p></div></div>
-        <div class="watch-item"><div class="watch-icon">!</div><div><h5>Divisional P&amp;L collision</h5><p>Without the value ledger, one division funds the intervention and another captures the value. <strong>The ledger is the unlock</strong> — designed for in the value-ledger enabler above.</p></div></div>
+        <div class="watch-item"><div class="watch-icon">!</div><div><h5>Divisional P&amp;L collision</h5><p>Without the value ledger, one division funds the intervention and another captures the value. <strong>The value-ledger enabler addresses this directly.</strong></p></div></div>
         <div class="watch-item"><div class="watch-icon">!</div><div><h5>Salesforce &amp; existing tech conversations</h5><p>Mars has parallel conversations on unified data and "360 parent view." <strong>Complement, don't collide.</strong> Our framing sits on top: data architecture serves value moments, not the other way around.</p></div></div>
       </div>
     </div>
