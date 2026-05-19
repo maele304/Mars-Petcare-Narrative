@@ -1869,6 +1869,248 @@
     font-weight: 600;
   }
 
+  /* === Healthcare evolution section === */
+  .hc-evo-section { margin-bottom: 56px; }
+  .hc-evo-section h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    line-height: 1.18;
+  }
+  .hc-evo-section .hc-sub {
+    font-size: 14px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  /* Evolution timeline */
+  .hc-evo-timeline {
+    background: var(--cream-soft);
+    padding: 24px;
+    border: 1px solid var(--hairline);
+    margin-bottom: 0;
+  }
+  .hc-evo-tier-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .hc-evo-tier-label .hc-evo-time {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  /* Chevron row */
+  .hc-evo-chevrons {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 18px;
+  }
+  .hc-evo-chev {
+    flex: 1;
+    padding: 16px 22px 18px 30px;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%, 16px 50%);
+    margin-left: -10px;
+    min-height: 168px;
+  }
+  .hc-evo-chev:first-child {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  .hc-evo-chev:last-child {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 16px 50%);
+    padding-right: 24px;
+  }
+  /* Colour progression: light → vivid */
+  .hc-evo-chev.c1 { background: #F4E2BC; }
+  .hc-evo-chev.c2 { background: #ECC988; }
+  .hc-evo-chev.c3 { background: #E3A95A; }
+  .hc-evo-chev.c4 { background: var(--accent); color: white; }
+
+  .hc-evo-chev-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  .hc-evo-chev.c4 .hc-evo-chev-num { color: rgba(255,255,255,0.75); }
+
+  .hc-evo-chev-name {
+    font-family: 'Antonio', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+  .hc-evo-chev.c4 .hc-evo-chev-name { color: white; }
+
+  .hc-evo-row { margin-bottom: 8px; }
+  .hc-evo-row-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    display: block;
+    margin-bottom: 1px;
+  }
+  .hc-evo-chev.c4 .hc-evo-row-label { color: rgba(255,255,255,0.7); }
+  .hc-evo-row-text {
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .hc-evo-chev.c4 .hc-evo-row-text { color: white; font-weight: 500; }
+
+  /* Time axis */
+  .hc-evo-axis {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    padding-top: 6px;
+    border-top: 1px dashed var(--hairline);
+  }
+
+  /* 5 typologies callout (inside timeline) */
+  .hc-evo-typology {
+    background: var(--white);
+    padding: 10px 14px;
+    border-left: 3px solid var(--gold);
+    font-size: 12.5px;
+    color: var(--navy);
+    line-height: 1.45;
+    margin-top: 14px;
+  }
+  .hc-evo-typology strong { font-weight: 700; color: var(--accent); }
+
+  /* Bridge: down arrow connecting healthcare → Mars */
+  .hc-evo-bridge {
+    text-align: center;
+    padding: 16px 0 14px;
+    position: relative;
+  }
+  .hc-evo-bridge-line {
+    width: 2px;
+    height: 18px;
+    background: var(--gold);
+    margin: 0 auto 6px;
+  }
+  .hc-evo-bridge-text {
+    display: inline-block;
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--cream);
+    padding: 4px 12px;
+  }
+  .hc-evo-bridge-arrow {
+    font-size: 22px;
+    color: var(--accent);
+    line-height: 1;
+    margin-top: 4px;
+  }
+
+  /* Mars unified perimeter panel */
+  .hc-evo-mars {
+    background: var(--navy);
+    color: white;
+    padding: 24px;
+    background-image:
+      radial-gradient(circle at 18% 25%, rgba(232,181,58,0.07), transparent 50%),
+      radial-gradient(circle at 82% 75%, rgba(184,24,16,0.06), transparent 50%);
+  }
+  .hc-evo-mars .hc-evo-tier-label { color: var(--gold); }
+  .hc-evo-mars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .hc-evo-mars-asset {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(232,181,58,0.3);
+    padding: 14px 14px;
+  }
+  .hc-evo-mars-asset-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .hc-evo-mars-asset-name {
+    font-family: 'Antonio', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+    line-height: 1.15;
+  }
+  .hc-evo-mars-asset-brands {
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.72);
+    font-style: italic;
+  }
+  .hc-evo-mars-tag {
+    display: inline-block;
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--cream);
+    background: var(--accent);
+    padding: 3px 10px;
+    margin-bottom: 6px;
+  }
+
+  /* Closing callout */
+  .hc-evo-callout {
+    background: var(--cream);
+    border-left: 4px solid var(--accent);
+    padding: 16px 20px;
+    margin-top: 18px;
+    font-size: 15px;
+    color: var(--navy);
+    line-height: 1.45;
+  }
+  .hc-evo-callout strong { color: var(--accent); font-weight: 700; }
+
+  @media (max-width: 960px) {
+    .hc-evo-chevrons { flex-direction: column; }
+    .hc-evo-chev { clip-path: none !important; margin-left: 0 !important; padding-left: 16px !important; min-height: auto; }
+    .hc-evo-mars-grid { grid-template-columns: 1fr 1fr; }
+  }
+  /* === end evolution section === */
+
   /* === Engine stack (Option E) === */
   .hc-engine-stack {
     background: var(--white);
@@ -1983,7 +2225,7 @@
   /* === end engine stack === */
 
   /* Scroll margin offsets for in-tab anchored sections (sticky nav + mini-nav) */
-  #hc-finding, #hc-cases, #hc-formula, #hc-frontback,
+  #hc-finding, #hc-evolution, #hc-cases, #hc-formula, #hc-frontback,
   #hc-bottlenecks, #hc-flywheel, #hc-mars {
     scroll-margin-top: 110px;
   }
@@ -2844,10 +3086,11 @@
       <div class="hc-mini-nav-inner">
         <span class="hc-mini-label">Jump to</span>
         <a href="#hc-finding">Finding</a>
+        <a href="#hc-evolution">Evolution</a>
         <a href="#hc-cases">Cases</a>
         <a href="#hc-formula">Formula</a>
-        <a href="#hc-frontback">Front / back</a>
-        <a href="#hc-bottlenecks">Failure modes</a>
+        <a href="#hc-frontback">Operating engine</a>
+        <a href="#hc-bottlenecks">Implications</a>
         <a href="#hc-flywheel">Mechanic</a>
         <a href="#hc-mars">Mars handoff</a>
       </div>
@@ -2877,6 +3120,98 @@
       <div class="hc-finding-eyebrow">The executive finding</div>
       <h3>Healthcare LTV only works when the formula changes the operating model.</h3>
       <p>The strongest published parallel is integrated healthcare and payer value-based care, rather than pharma. In these models, lifetime value, prevention, retention, care quality and cost-to-serve are wired into <strong>day-to-day operating decisions</strong>.</p>
+    </div>
+
+    <!-- SECTION A.5: HEALTHCARE EVOLUTION -->
+    <div class="hc-evo-section" id="hc-evolution">
+      <h3>The same shift has played out in pharma and healthcare over the last decade.</h3>
+      <p class="hc-sub">Industry-wide, the operating metric has migrated from product volume to longitudinal value tied to outcomes, retention and ecosystem economics. The assets needed to operate at the right-hand end of this evolution were assembled across five separate industry typologies — Mars Petcare already holds the equivalent under one P&amp;L.</p>
+
+      <!-- TIMELINE -->
+      <div class="hc-evo-timeline">
+        <div class="hc-evo-tier-label">
+          <span>Healthcare's 10-year evolution</span>
+          <span class="hc-evo-time">Product volume → Longitudinal value</span>
+        </div>
+
+        <div class="hc-evo-chevrons">
+          <div class="hc-evo-chev c1">
+            <div class="hc-evo-chev-num">Stage 01</div>
+            <div class="hc-evo-chev-name">Pharma 1.0</div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Primary metric</span><div class="hc-evo-row-text">Units / scripts</div></div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Strategy focus</span><div class="hc-evo-row-text">Sell drugs</div></div>
+          </div>
+          <div class="hc-evo-chev c2">
+            <div class="hc-evo-chev-num">Stage 02</div>
+            <div class="hc-evo-chev-name">Pharma 2.0</div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Primary metric</span><div class="hc-evo-row-text">Patient starts &amp; adherence</div></div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Strategy focus</span><div class="hc-evo-row-text">Keep patient on therapy</div></div>
+          </div>
+          <div class="hc-evo-chev c3">
+            <div class="hc-evo-chev-num">Stage 03</div>
+            <div class="hc-evo-chev-name">Healthcare platform</div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Primary metric</span><div class="hc-evo-row-text">Lifetime patient value</div></div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Strategy focus</span><div class="hc-evo-row-text">Manage longitudinal care</div></div>
+          </div>
+          <div class="hc-evo-chev c4">
+            <div class="hc-evo-chev-num">Stage 04</div>
+            <div class="hc-evo-chev-name">Value-based care</div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Primary metric</span><div class="hc-evo-row-text">Outcome-adjusted LTV</div></div>
+            <div class="hc-evo-row"><span class="hc-evo-row-label">Strategy focus</span><div class="hc-evo-row-text">Optimise total health ecosystem</div></div>
+          </div>
+        </div>
+
+        <div class="hc-evo-axis">
+          <span>Earlier</span>
+          <span>↗ rising scope, value &amp; complexity</span>
+          <span>Today</span>
+        </div>
+
+        <div class="hc-evo-typology">
+          Built across <strong>five separate industry typologies</strong> — Payers (UnitedHealth, Humana), Providers (NHS, HCA Healthcare), Pharma (Pfizer, Novartis), Diagnostics (Abbott, Roche Diagnostics), Retail (CVS Health, Boots).
+        </div>
+      </div>
+
+      <!-- BRIDGE -->
+      <div class="hc-evo-bridge">
+        <div class="hc-evo-bridge-line"></div>
+        <span class="hc-evo-bridge-text">Already inside one perimeter at Mars Petcare</span>
+        <div class="hc-evo-bridge-arrow">▼</div>
+      </div>
+
+      <!-- MARS PANEL -->
+      <div class="hc-evo-mars">
+        <div class="hc-evo-tier-label">
+          <span><span class="hc-evo-mars-tag">One P&amp;L</span> Mars Petcare ecosystem · already assembled</span>
+        </div>
+        <div class="hc-evo-mars-grid">
+          <div class="hc-evo-mars-asset">
+            <div class="hc-evo-mars-asset-label">01 · Clinical care</div>
+            <div class="hc-evo-mars-asset-name">MVH</div>
+            <div class="hc-evo-mars-asset-brands">Banfield · VCA · BluePearl · Linnaeus · AniCura</div>
+          </div>
+          <div class="hc-evo-mars-asset">
+            <div class="hc-evo-mars-asset-label">02 · Nutrition</div>
+            <div class="hc-evo-mars-asset-name">Royal Canin</div>
+            <div class="hc-evo-mars-asset-brands">+ Pet Nutrition portfolio</div>
+          </div>
+          <div class="hc-evo-mars-asset">
+            <div class="hc-evo-mars-asset-label">03 · Diagnostics</div>
+            <div class="hc-evo-mars-asset-name">Antech</div>
+            <div class="hc-evo-mars-asset-brands">+ Mars diagnostic platforms</div>
+          </div>
+          <div class="hc-evo-mars-asset">
+            <div class="hc-evo-mars-asset-label">04 · Engagement &amp; data spine</div>
+            <div class="hc-evo-mars-asset-name">Kinship</div>
+            <div class="hc-evo-mars-asset-brands">Pet-parent platform &amp; data layer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLOSING CALLOUT -->
+      <div class="hc-evo-callout">
+        Healthcare assembled across <strong>five separate typologies over ten years</strong> what Mars Petcare already owns under <strong>one P&amp;L</strong>. The operating-model migration in this section is the work — the asset migration is already done.
+      </div>
     </div>
 
     <!-- SECTION B: THREE CASES -->
