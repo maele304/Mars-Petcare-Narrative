@@ -272,6 +272,227 @@
   .pov-text strong { font-weight: 700; }
   .pov-text em { color: var(--accent); font-style: normal; font-weight: 700; }
 
+  /* === 5 Pathways chart (Tab 1) === */
+  .pathways-chart-section {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    padding: 28px 32px 30px;
+    margin-bottom: 36px;
+  }
+  .pathways-chart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pathways-chart-head h3 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 18px;
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .pathways-chart-head .chart-eyebrow {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .pathways-chart-sub {
+    font-size: 12.5px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  /* Legend strip for the 4 divisions */
+  .chart-legend {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .chart-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .chart-legend-swatch {
+    width: 14px;
+    height: 12px;
+  }
+  .swatch-pn  { background: #B81810; }
+  .swatch-rc  { background: #C99A6A; }
+  .swatch-mvh { background: #1F2C66; }
+  .swatch-sdx { background: #2C7A7B; }
+
+  /* Header row */
+  .chart-header-row {
+    display: grid;
+    grid-template-columns: 220px 110px 1fr 120px;
+    gap: 14px;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .chart-header-row > div {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+  }
+  .chart-header-row > div.right { text-align: right; }
+
+  .chart-row {
+    display: grid;
+    grid-template-columns: 220px 110px 1fr 120px;
+    gap: 14px;
+    align-items: center;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  .chart-row:last-of-type { border-bottom: none; }
+
+  .chart-row-name {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+    padding-right: 6px;
+  }
+  .chart-row-name .num {
+    color: var(--tan);
+    font-weight: 700;
+    margin-right: 6px;
+  }
+  .chart-row-name .sub {
+    display: block;
+    font-size: 10px;
+    color: var(--ink-mute);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+  }
+
+  /* Range value text in the middle column */
+  .chart-range {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+  }
+  .chart-range .range-cap {
+    display: block;
+    font-size: 9px;
+    color: var(--ink-mute);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  /* Stacked division share bar */
+  .chart-stack {
+    display: flex;
+    height: 24px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .chart-stack-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: 'Antonio', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    line-height: 1;
+    border-right: 1px solid rgba(255,255,255,0.35);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .chart-stack-seg:last-child { border-right: none; }
+  .chart-stack-seg.pn  { background: #B81810; }
+  .chart-stack-seg.rc  { background: #C99A6A; color: #2C2C2C; }
+  .chart-stack-seg.mvh { background: #1F2C66; }
+  .chart-stack-seg.sdx { background: #2C7A7B; }
+
+  .chart-row-lead {
+    text-align: right;
+    font-family: 'Antonio', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.35;
+  }
+  .chart-row-lead .lead-sub {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* Combined row */
+  .chart-row.combined-row {
+    border-top: 2px solid var(--navy);
+    border-bottom: none;
+    padding: 16px 0 4px;
+    margin-top: 6px;
+  }
+  .chart-row.combined-row .chart-row-name {
+    color: var(--navy);
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+  .chart-row.combined-row .chart-range {
+    font-size: 18px;
+  }
+  .chart-row.combined-row .chart-stack {
+    height: 30px;
+  }
+  .chart-row.combined-row .chart-stack-seg {
+    font-size: 12px;
+  }
+
+  .chart-footer {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--hairline);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    font-style: italic;
+    line-height: 1.45;
+  }
+  .chart-footer strong { color: var(--navy); font-weight: 600; font-style: normal; }
+
+  @media (max-width: 960px) {
+    .chart-header-row, .chart-row { grid-template-columns: 1fr; gap: 6px; }
+    .chart-row-lead, .chart-range { text-align: left; }
+  }
+  /* === end pathways chart === */
+
   .summary-grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -484,6 +705,107 @@
   .lean-intro h3 { font-size: 22px; color: var(--navy); margin-bottom: 10px; }
   .lean-intro p { font-size: 16px; line-height: 1.55; color: var(--ink); }
   .lean-intro p strong { color: var(--accent); font-weight: 700; }
+
+  /* === Three Moves overview (Tab 4) === */
+  .moves-section { margin-bottom: 48px; }
+  .moves-section .moves-header { margin-bottom: 22px; }
+  .moves-section h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    line-height: 1.18;
+  }
+  .moves-section .moves-sub {
+    font-size: 14px;
+    color: var(--ink-mute);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .moves-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .move-card {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .move-card.m1 { border-top: 5px solid var(--navy); }
+  .move-card.m2 { border-top: 5px solid var(--gold); }
+  .move-card.m3 { border-top: 5px solid var(--accent); }
+
+  .move-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .move-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+  }
+  .move-tag {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--white);
+    padding: 4px 9px;
+    white-space: nowrap;
+  }
+  .move-card.m1 .move-tag { background: var(--navy); }
+  .move-card.m2 .move-tag { background: #B58C25; }
+  .move-card.m3 .move-tag { background: var(--accent); }
+
+  .move-title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .move-row {
+    padding: 10px 0;
+    border-top: 1px dashed var(--hairline);
+  }
+  .move-row:first-of-type { border-top: none; padding-top: 4px; }
+  .move-row-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+  }
+  .move-card.m1 .move-row-label { color: var(--navy); }
+  .move-card.m2 .move-row-label { color: #8B6F1A; }
+  .move-card.m3 .move-row-label { color: var(--accent); }
+
+  .move-row-text {
+    font-size: 12.5px;
+    color: var(--ink);
+    line-height: 1.42;
+  }
+  .move-row-text strong { color: var(--navy); font-weight: 600; }
+
+  @media (max-width: 960px) {
+    .moves-grid { grid-template-columns: 1fr; }
+  }
+  /* === end three moves === */
 
   /* ECOSYSTEM DIAGRAM (placeholder) */
   .ecosystem-section {
@@ -798,6 +1120,190 @@
   .pilot-readout p strong { color: var(--navy); font-weight: 600; }
   .pilot-readout p em { color: var(--accent); font-style: normal; font-weight: 700; }
 
+  /* === Hannah & Milo persona block === */
+  .persona-block {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .persona-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #6B466B;
+    color: var(--white);
+    padding: 4px 12px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .persona-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  .persona-header h4 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.18;
+    margin-bottom: 6px;
+  }
+  .persona-header p {
+    font-size: 13.5px;
+    color: var(--ink-mute);
+    line-height: 1.45;
+    font-style: italic;
+    max-width: 800px;
+  }
+  .persona-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  .persona-cell {
+    padding: 18px 24px;
+    border-right: 1px solid var(--hairline-soft);
+  }
+  .persona-cell:last-child { border-right: none; }
+  .persona-cell-eyebrow {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .persona-name {
+    font-family: 'Antonio', sans-serif;
+    font-size: 17px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .persona-detail {
+    font-size: 12.5px;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  .persona-detail strong { font-weight: 600; color: var(--navy); }
+  .persona-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  .persona-pill {
+    font-size: 10.5px;
+    color: var(--navy);
+    background: var(--cream-soft);
+    padding: 2px 8px;
+    border: 1px solid var(--hairline);
+    line-height: 1.4;
+  }
+  .persona-stats {
+    background: var(--cream-soft);
+  }
+  .persona-stat-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.05;
+    margin-bottom: 2px;
+  }
+  .persona-stat-cap {
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    line-height: 1.4;
+    font-style: italic;
+  }
+  .persona-journey {
+    padding: 18px 24px 22px;
+  }
+  .persona-journey-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 12px;
+  }
+  .journey-flow {
+    display: grid;
+    grid-template-columns: 1fr 14px 1fr 14px 1fr 14px 1fr;
+    gap: 6px;
+    align-items: stretch;
+  }
+  .journey-step {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--accent);
+    padding: 12px 14px;
+  }
+  .journey-step.thrive { border-top-color: var(--gold); }
+  .journey-step-time {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .journey-step-title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13.5px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .journey-step-body {
+    font-size: 11px;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .journey-step-divs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .journey-div-pill {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+  .journey-div-pill.mvh { background: rgba(31,44,102,0.12); color: var(--navy); }
+  .journey-div-pill.sdx { background: rgba(44,122,123,0.15); color: #2C7A7B; }
+  .journey-div-pill.rc { background: rgba(201,154,106,0.20); color: #8B6F3A; }
+  .journey-div-pill.ext { background: rgba(107,70,107,0.15); color: #6B466B; }
+  .journey-arrow {
+    align-self: center;
+    color: var(--accent);
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+  }
+  @media (max-width: 960px) {
+    .persona-row { grid-template-columns: 1fr; }
+    .persona-cell { border-right: none; border-bottom: 1px solid var(--hairline-soft); }
+    .journey-flow { grid-template-columns: 1fr; }
+    .journey-arrow { display: none; }
+  }
+  /* === end persona === */
+
   /* ===== TAB 4: ENABLERS ===== */
   .enabler-pills {
     display: grid;
@@ -876,6 +1382,96 @@
   .enabler-card.process .pill { border-color: var(--teal); color: var(--teal); }
   .enabler-card.tech .pill { border-color: var(--plum); color: var(--plum); }
   .enabler-list li .text { font-size: 13.5px; color: var(--ink); line-height: 1.45; }
+
+  /* === Six non-negotiable trust gates === */
+  .gates-section {
+    margin-bottom: 48px;
+  }
+  .gates-section h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    line-height: 1.18;
+  }
+  .gates-section .sub {
+    font-size: 14px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .gates-mandate {
+    background: var(--accent);
+    color: var(--white);
+    padding: 12px 20px;
+    margin-bottom: 18px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+  .gates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .gate-card {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    border-left: 4px solid var(--accent);
+    padding: 18px 20px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .gate-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gate-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .gate-title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+  .gate-body {
+    font-size: 12.5px;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+  .gate-kpi {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    padding-top: 8px;
+    border-top: 1px dashed var(--hairline);
+  }
+  .gate-kpi strong {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  @media (max-width: 960px) {
+    .gates-grid { grid-template-columns: 1fr; }
+  }
+  /* === end gates === */
 
   /* GANTT CHART */
   .gantt-section {
@@ -2226,7 +2822,7 @@
 
   /* Scroll margin offsets for in-tab anchored sections (sticky nav + mini-nav) */
   #hc-finding, #hc-evolution, #hc-cases, #hc-formula, #hc-frontback,
-  #hc-bottlenecks, #hc-flywheel, #hc-mars {
+  #hc-bottlenecks, #hc-angles, #hc-flywheel, #hc-mars {
     scroll-margin-top: 110px;
   }
 
@@ -2626,6 +3222,215 @@
   }
   .hc-prem-callout strong { color: var(--gold); font-weight: 600; }
 
+  /* === 3 Strategic Angles section === */
+  .hc-angles-section { margin-bottom: 56px; }
+  .hc-angles-section h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    line-height: 1.18;
+  }
+  .hc-angles-section .hc-sub {
+    font-size: 14px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .hc-angles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .hc-angle-card {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    padding: 22px 22px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .hc-angle-card.a1 { border-top: 5px solid var(--navy); }
+  .hc-angle-card.a2 { border-top: 5px solid var(--gold); }
+  .hc-angle-card.a3 { border-top: 5px solid var(--accent); }
+
+  .hc-angle-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+  .hc-angle-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--tan);
+    line-height: 1;
+  }
+  .hc-angle-tag {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--white);
+    padding: 5px 10px;
+    align-self: flex-start;
+    white-space: nowrap;
+  }
+  .hc-angle-card.a1 .hc-angle-tag { background: var(--navy); }
+  .hc-angle-card.a2 .hc-angle-tag { background: #B58C25; }
+  .hc-angle-card.a3 .hc-angle-tag { background: var(--accent); }
+
+  .hc-angle-title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.18;
+    margin-bottom: 12px;
+  }
+  .hc-angle-q {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.45;
+    font-style: italic;
+    margin-bottom: 14px;
+    padding-left: 12px;
+    border-left: 2px solid var(--hairline);
+  }
+  .hc-angle-pitfalls {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-top: auto;
+    padding-top: 8px;
+    border-top: 1px dashed var(--hairline);
+  }
+  .hc-angle-pitfalls strong {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Angle deep-dive expansion content */
+  .hc-angle-deep {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--hairline);
+  }
+  .hc-angle-deep-row {
+    margin-bottom: 12px;
+  }
+  .hc-angle-deep-row:last-child { margin-bottom: 0; }
+  .hc-angle-deep-label {
+    font-family: 'Antonio', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+  }
+  .hc-angle-card.a1 .hc-angle-deep-label { color: var(--navy); }
+  .hc-angle-card.a2 .hc-angle-deep-label { color: #8B6F1A; }
+  .hc-angle-card.a3 .hc-angle-deep-label { color: var(--accent); }
+
+  .hc-angle-deep-text {
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  .hc-angle-deep-text strong { color: var(--navy); font-weight: 600; }
+  .hc-angle-deep-text em { color: var(--accent); font-style: normal; font-weight: 600; }
+
+  .hc-angle-stat-strip {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--cream-soft);
+    border-left: 3px solid;
+    margin-top: 4px;
+  }
+  .hc-angle-card.a1 .hc-angle-stat-strip { border-left-color: var(--navy); }
+  .hc-angle-card.a2 .hc-angle-stat-strip { border-left-color: var(--gold); }
+  .hc-angle-card.a3 .hc-angle-stat-strip { border-left-color: var(--accent); }
+
+  .hc-angle-stat-num {
+    font-family: 'Antonio', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .hc-angle-stat-cap {
+    font-size: 10.5px;
+    color: var(--ink-mute);
+    line-height: 1.3;
+    font-style: italic;
+  }
+
+  .hc-angle-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 6px 10px;
+    background: rgba(184,24,16,0.06);
+    border: 1px solid rgba(184,24,16,0.2);
+    margin-top: 4px;
+  }
+  .hc-angle-link:hover { background: rgba(184,24,16,0.12); }
+
+  .hc-angles-owner {
+    background: var(--navy);
+    color: var(--white);
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hc-angles-owner-tag {
+    font-family: 'Antonio', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+    padding-right: 14px;
+    border-right: 1px solid rgba(232,181,58,0.4);
+  }
+  .hc-angles-owner-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--white);
+  }
+  .hc-angles-owner-text strong {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  @media (max-width: 960px) {
+    .hc-angles-grid { grid-template-columns: 1fr; }
+    .hc-angles-owner { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .hc-angles-owner-tag { border-right: none; border-bottom: 1px solid rgba(232,181,58,0.4); padding-right: 0; padding-bottom: 6px; }
+  }
+  /* === end strategic angles === */
+
   /* Pathway mini-panel */
   .hc-pathway-section {
     margin-top: 36px;
@@ -2892,7 +3697,7 @@
     <div class="title-block">
       <div>
         <div class="title-eyebrow">A Point of View</div>
-        <h1>From ambition <span class="light">to</span> <span class="hero-placeholder">[placeholder · $X bn]</span> in pet lifetime value.</h1>
+        <h1>Operationalising <span class="light">Pet Lifetime Value can potentially add</span> +$4.5–$8.5B <span class="light">to Mars Petcare's $30B+ baseline.</span></h1>
         <p class="title-sub">A practitioner's read on how Mars Petcare can move <strong>health economics from concept to enterprise value</strong> — anchored in MVH, proven in one cohort, built to amplify divisions rather than replace them.</p>
       </div>
       <div class="pets-art">
@@ -2987,10 +3792,115 @@
 <section class="tab-panel active tab-section" id="t1">
   <div class="container">
 
-    <div class="pov-statement is-placeholder">
-      <div class="pov-label">Our point of view, in one paragraph <span class="pov-placeholder-badge">[placeholder · content to be revised]</span></div>
+    <div class="pov-statement">
+      <div class="pov-label">Our point of view, in one paragraph</div>
       <div class="pov-text">
-        Most of the signals required to act on lifetime value already exist across Mars's divisions. They do not yet show up in the P&amp;L because divisions optimise their own moments rather than the pet's lifetime. The work is to build the operating rhythm that lets existing assets act as one — framed as <strong>health economics with lifetime value as the operating metric</strong>, tested first on the senior-pet cohort, with the cross-divisional incentive layer designed in parallel.
+        Mars Petcare operates as <strong>PN + RC + MVH + SDx</strong> — an integrated stack that already exists. Most signals required for a cross-divisional Pet Lifetime Value engine sit inside Mars today; they do not yet show up in the P&amp;L because divisions optimise their own moments rather than the pet's lifetime. <strong>Five cross-division pathways</strong> — Preventive, Chronic, Senior Care, Dental, Early-Life Onboarding — could compound into <strong>+$4.5–$8.5B incremental revenue by Year 5</strong> (+7–12% CAGR, $1.0–$1.6B cumulative investment). First proof: one senior-dog pathway in one market.
+      </div>
+    </div>
+
+    <!-- 5 PATHWAYS CHART: DIVISION SHARE OF UPLIFT -->
+    <div class="pathways-chart-section">
+      <div class="pathways-chart-head">
+        <h3>Five cross-division pathways — each needs all four divisions, in different proportions.</h3>
+        <span class="chart-eyebrow">Initial sizing · directional</span>
+      </div>
+      <p class="pathways-chart-sub">For each pathway: the Year 5 incremental revenue range, and the share of that uplift attributed to each division. Lead division shown on the right. <strong style="color:var(--navy);">Every pathway requires every division</strong> — the leads change, but the stack stays.</p>
+
+      <div class="chart-legend">
+        <div class="chart-legend-item"><span class="chart-legend-swatch swatch-pn"></span>PN · Pet Nutrition</div>
+        <div class="chart-legend-item"><span class="chart-legend-swatch swatch-rc"></span>RC · Royal Canin</div>
+        <div class="chart-legend-item"><span class="chart-legend-swatch swatch-mvh"></span>MVH · Mars Veterinary Health</div>
+        <div class="chart-legend-item"><span class="chart-legend-swatch swatch-sdx"></span>SDx · Science &amp; Diagnostics</div>
+      </div>
+
+      <div class="chart-header-row">
+        <div>Pathway</div>
+        <div style="text-align:center;">Y5 range</div>
+        <div>Division share of uplift</div>
+        <div class="right">P&amp;L lead</div>
+      </div>
+
+      <!-- 01 Preventive: MVH 35 · PN 25 · RC 25 · SDx 15 -->
+      <div class="chart-row">
+        <div class="chart-row-name"><span class="num">01</span>Preventive &amp; Wellness<span class="sub">Membership cadence</span></div>
+        <div class="chart-range">$1.2–$2.5B<span class="range-cap">Year 5</span></div>
+        <div class="chart-stack">
+          <div class="chart-stack-seg mvh" style="width:35%;">MVH 35%</div>
+          <div class="chart-stack-seg pn"  style="width:25%;">PN 25%</div>
+          <div class="chart-stack-seg rc"  style="width:25%;">RC 25%</div>
+          <div class="chart-stack-seg sdx" style="width:15%;">SDx 15%</div>
+        </div>
+        <div class="chart-row-lead">MVH lead<span class="lead-sub">+ PN, RC, SDx</span></div>
+      </div>
+
+      <!-- 02 Chronic: RC 40 · MVH 25 · SDx 25 · PN 10 -->
+      <div class="chart-row">
+        <div class="chart-row-name"><span class="num">02</span>Chronic Care<span class="sub">Lifetime-value play</span></div>
+        <div class="chart-range">$1.5–$3.0B<span class="range-cap">Year 5</span></div>
+        <div class="chart-stack">
+          <div class="chart-stack-seg rc"  style="width:40%;">RC 40%</div>
+          <div class="chart-stack-seg mvh" style="width:25%;">MVH 25%</div>
+          <div class="chart-stack-seg sdx" style="width:25%;">SDx 25%</div>
+          <div class="chart-stack-seg pn"  style="width:10%;">PN 10%</div>
+        </div>
+        <div class="chart-row-lead">RC lead<span class="lead-sub">+ MVH, SDx, PN</span></div>
+      </div>
+
+      <!-- 03 Senior: RC 30 · SDx 30 · MVH 25 · PN 15 -->
+      <div class="chart-row">
+        <div class="chart-row-name"><span class="num">03</span>Senior &amp; Longevity<span class="sub">Aging-pet annuity</span></div>
+        <div class="chart-range">$0.8–$1.7B<span class="range-cap">Year 5</span></div>
+        <div class="chart-stack">
+          <div class="chart-stack-seg rc"  style="width:30%;">RC 30%</div>
+          <div class="chart-stack-seg sdx" style="width:30%;">SDx 30%</div>
+          <div class="chart-stack-seg mvh" style="width:25%;">MVH 25%</div>
+          <div class="chart-stack-seg pn"  style="width:15%;">PN 15%</div>
+        </div>
+        <div class="chart-row-lead">RC + SDx joint<span class="lead-sub">+ MVH, PN</span></div>
+      </div>
+
+      <!-- 04 Dental: PN 35 · MVH 30 · RC 25 · SDx 10 -->
+      <div class="chart-row">
+        <div class="chart-row-name"><span class="num">04</span>Dental &amp; Oral Health<span class="sub">Mars's clearest moat</span></div>
+        <div class="chart-range">$0.7–$1.5B<span class="range-cap">Year 5</span></div>
+        <div class="chart-stack">
+          <div class="chart-stack-seg pn"  style="width:35%;">PN 35%</div>
+          <div class="chart-stack-seg mvh" style="width:30%;">MVH 30%</div>
+          <div class="chart-stack-seg rc"  style="width:25%;">RC 25%</div>
+          <div class="chart-stack-seg sdx" style="width:10%;">SDx 10%</div>
+        </div>
+        <div class="chart-row-lead">PN lead<span class="lead-sub">+ MVH, RC</span></div>
+      </div>
+
+      <!-- 05 Early-Life: PN 30 · RC 25 · MVH 25 · SDx 20 -->
+      <div class="chart-row">
+        <div class="chart-row-name"><span class="num">05</span>Early-Life Onboarding<span class="sub">Lifetime customer capture</span></div>
+        <div class="chart-range">$0.5–$1.2B<span class="range-cap">Year 5</span></div>
+        <div class="chart-stack">
+          <div class="chart-stack-seg pn"  style="width:30%;">PN 30%</div>
+          <div class="chart-stack-seg rc"  style="width:25%;">RC 25%</div>
+          <div class="chart-stack-seg mvh" style="width:25%;">MVH 25%</div>
+          <div class="chart-stack-seg sdx" style="width:20%;">SDx 20%</div>
+        </div>
+        <div class="chart-row-lead">PN + RC joint<span class="lead-sub">+ MVH, SDx</span></div>
+      </div>
+
+      <!-- Combined Y5 -->
+      <div class="chart-row combined-row">
+        <div class="chart-row-name">Combined Y5 incremental<span class="sub">After netting cross-pathway overlap</span></div>
+        <div class="chart-range">+$4.5–$8.5B<span class="range-cap">vs. $30B+ baseline</span></div>
+        <div class="chart-stack">
+          <div class="chart-stack-seg mvh" style="width:28%;">MVH ~28%</div>
+          <div class="chart-stack-seg rc"  style="width:28%;">RC ~28%</div>
+          <div class="chart-stack-seg pn"  style="width:24%;">PN ~24%</div>
+          <div class="chart-stack-seg sdx" style="width:20%;">SDx ~20%</div>
+        </div>
+        <div class="chart-row-lead">+7–12% CAGR<span class="lead-sub">$1.0–$1.6B inv.</span></div>
+      </div>
+
+      <div class="chart-footer">
+        <strong>The integrated-stack point</strong>: each pathway needs all four divisions in different proportions — there is no pathway Mars can run with one or two divisions alone. The lead changes (MVH for Preventive, RC for Chronic, RC+SDx for Senior, PN for Dental, PN+RC for Early-Life), but the supporting cast stays. <em>This is the cross-divisional value the value-ledger is designed to recognise.</em>
       </div>
     </div>
 
@@ -2998,29 +3908,29 @@
       <div class="story-blocks">
         <div class="story-block">
           <div class="story-block-head"><div class="story-block-num">01</div><div class="story-block-label">Where the value sits</div></div>
-          <h3>Existing data is sufficient. The barrier is cross-divisional orchestration.</h3>
-          <p>Most of the signals required for a lifetime-value engine already exist across Mars's divisions — scattered across systems rather than absent. What needs building is the orchestration layer that turns existing signals into cross-divisional decisions, and the incentive design that lets one division fund what another captures.</p>
+          <h3>An integrated stack that already exists.</h3>
+          <p>Mars Petcare operates as <strong>PN + RC + MVH + SDx</strong> under one P&amp;L. Most signals required for a cross-divisional PLV engine sit inside Mars today. They do not yet show up in the P&amp;L because divisions optimise their own moments rather than the pet's lifetime.</p>
         </div>
         <div class="story-block">
-          <div class="story-block-head"><div class="story-block-num">02</div><div class="story-block-label">Why this works</div></div>
-          <h3>The healthcare operating model transfers to Mars Petcare.</h3>
-          <p>Humana operates CLTV as an enterprise KPI across Medicare Advantage, delivering <strong>24.3% lower inpatient admissions, 13.4% fewer ED visits, and $12.8B in savings</strong> versus traditional Medicare. The same operating logic ports to Mars Petcare, and no competitor has the full asset stack to run it: Nutrition, Vet, Diagnostics, Science and Data under one P&amp;L.</p>
+          <div class="story-block-head"><div class="story-block-num">02</div><div class="story-block-label">The operating frame</div></div>
+          <h3>Pet Lifetime Value across five pathways.</h3>
+          <p>The work is to build the operating rhythm that lets existing assets act as one. Five pathways — <strong>Preventive · Chronic · Senior Care · Dental · Early-Life Onboarding</strong> — built on the current stack, potentially delivering <strong>+$4.5–$8.5B at +7–12% CAGR</strong> (initial sizing).</p>
         </div>
         <div class="story-block">
-          <div class="story-block-head"><div class="story-block-num">03</div><div class="story-block-label">How we'd start</div></div>
-          <h3>A six-month pilot designed to prove the model.</h3>
-          <p>The pilot would anchor in MVH — the deepest clinical touchpoints, first-party data and identity resolution sit here. The value tree would be tested on senior pets in a single market with pre-registered outcomes. The cross-divisional value ledger would run in parallel so divisions receive credit for the ecosystem value they create.</p>
+          <div class="story-block-head"><div class="story-block-num">03</div><div class="story-block-label">Where to start</div></div>
+          <h3>Senior-dog pathway, one market, 90 days.</h3>
+          <p>Walk through the story of <strong>Milo, a 7-year-old Labrador</strong>: Visit (MVH) → Panel (Antech) → Plan (Royal Canin) → 90-day check (Kinship). The pilot proves the model and how it works before any org-wide investment.</p>
         </div>
       </div>
 
       <div class="numbers-panel">
-        <div class="numbers-panel-label">Illustrative · Senior pets</div>
-        <h2>Senior-pet LTV: fragmented today vs. coordinated pathway</h2>
-        <div class="num-row"><div class="num-big">$1,200</div><div class="num-cap">Baseline LTV today, with care fragmented across divisions</div></div>
-        <div class="num-row"><div class="num-big">$1,850</div><div class="num-cap">LTV when MVH, Royal Canin and Antech operate as a connected pathway</div></div>
-        <div class="num-row"><div class="num-big plus">+$650</div><div class="num-cap">Incremental per-pet LTV, approximately 54%</div></div>
-        <div class="num-row"><div class="num-big plus">+$7K</div><div class="num-cap">Implied per-Labrador uplift over two additional healthy years ($23K → $30K, illustrative)</div></div>
-        <div class="num-flag">Illustrative figures drawn from the WIP narrative. To be replaced with cohort-specific data once the pilot is scoped.</div>
+        <div class="numbers-panel-label">Initial sizing · directional</div>
+        <h2>The opportunity, in three figures</h2>
+        <div class="num-row"><div class="num-big">$30B+</div><div class="num-cap">Current Mars Petcare baseline · PN $13B + RC $5B + MVH $11B + SDx $2B</div></div>
+        <div class="num-row"><div class="num-big plus">+$4.5–8.5B</div><div class="num-cap">Year 5 incremental revenue from 5 cross-division pathways · +7–12% CAGR</div></div>
+        <div class="num-row"><div class="num-big">$1.0–1.6B</div><div class="num-cap">Cumulative investment over 5 years to deliver the opportunity</div></div>
+        <div class="num-row"><div class="num-big">~$2,000 <span style="font-size:0.65em;color:var(--ink-mute);">/ ~$150</span></div><div class="num-cap">Senior-dog leading case · gross full pathway / margin contribution per fully-engaged pet</div></div>
+        <div class="num-flag">Quantitative ranges directional, drawn from outside-in industry research. Mars internal financials not used. To be replaced with cohort-specific data once the pilot is scoped.</div>
       </div>
     </div>
 
@@ -3041,7 +3951,7 @@
     <div class="context-grid">
       <div class="context-card"><div class="marker"></div><div class="context-card-num">01</div><h3>Only Mars owns the full stack</h3><p>Nutrition, Vet, Diagnostics, Science and Data all sit under one P&amp;L. <strong>No competitor holds all five.</strong> What does not yet exist is the connecting layer that operates them as a single system.</p></div>
       <div class="context-card"><div class="marker"></div><div class="context-card-num">02</div><h3>Competitor attempts to date</h3><p>Zoetis attempted pet-level LTV in 2025 and could not assemble the data. Chewy, Trupanion and Petco have credible relationship economics, but each operates within a single lane — retail, insurance, membership. None spans the full lifecycle.</p></div>
-      <div class="context-card"><div class="marker"></div><div class="context-card-num">03</div><h3>The data already exists</h3><p>Most signals required for a CLTV engine sit across Mars's divisions today — fragmented across systems, not absent. The barrier is orchestration and incentive design, both of which can be addressed in months rather than years.</p></div>
+      <div class="context-card"><div class="marker"></div><div class="context-card-num">03</div><h3>The data already exists</h3><p>The pet-health asset depth at Mars is unusual: Banfield alone holds <strong>~233M visits, ~37M pet patients, ~2.12B lab findings and ~91.5B EMR rows</strong>, complemented by Antech diagnostic panels, Wisdom Panel genomics and the Royal Canin nutrition pathway. Signals exist; <strong>the gap is a shared identity spine and decision loop</strong>, not raw data.</p></div>
     </div>
 
     <div class="voice-block">
@@ -3079,7 +3989,7 @@
   <div class="container">
     <div class="section-eyebrow">03 · Healthcare model lens · learnings → implications</div>
     <h2 class="section-title">What other models teach us <span class="light">— and what it implies for Mars.</span></h2>
-    <p class="section-lede">This tab covers the evidence and the implications. The plan for Mars — where to anchor, how to operate, what to prove — sits in <strong>Where to start (Tab 04 →)</strong>. Lifetime value as an enterprise operating model has been built most completely in <strong>integrated payers and value-based care, not in pharma</strong>. Pharma contributes the predictive lens. Pet insurance contributes formula discipline. <strong>No public case shows a multi-division pet ecosystem operating CLTV at scale</strong> — Mars Petcare can be the first.</p>
+    <p class="section-lede">This tab covers the evidence and the implications. The plan for Mars — where to anchor, how to operate, what to prove — sits in <strong>Where to start (Tab 04 →)</strong>. Lifetime value as an enterprise operating model has been built most completely in <strong>integrated payers and value-based care, not in pharma</strong>. Pharma contributes the predictive lens. Pet insurance contributes formula discipline. <strong>No public case shows a multi-division pet ecosystem operating Pet Lifetime Value at scale</strong> — Mars Petcare can be the first.</p>
 
     <!-- Mini in-tab navigation -->
     <div class="hc-mini-nav">
@@ -3091,6 +4001,7 @@
         <a href="#hc-formula">Formula</a>
         <a href="#hc-frontback">Operating engine</a>
         <a href="#hc-bottlenecks">Implications</a>
+        <a href="#hc-angles">3 angles</a>
         <a href="#hc-flywheel">Mechanic</a>
         <a href="#hc-mars">Mars handoff</a>
       </div>
@@ -3456,7 +4367,7 @@
 
         <div class="hc-prem-row">
           <div class="hc-prem-cell failure med-high">Time to value</div>
-          <div class="hc-prem-cell design"><strong>Leading indicators + forward CLTV model</strong></div>
+          <div class="hc-prem-cell design"><strong>Leading indicators + forward PLV model</strong></div>
           <div class="hc-prem-cell proof">Use 90-day adherence and uptake to inform a 36-month value model.</div>
         </div>
 
@@ -3469,6 +4380,107 @@
 
       <div class="hc-prem-callout">
         <strong>The implication: start with one controlled lifecycle pathway that exercises the full operating model end-to-end</strong>, rather than an enterprise data programme.
+      </div>
+    </div>
+
+    <!-- SECTION E.5: 7 CHALLENGES → 3 STRATEGIC ANGLES -->
+    <div class="hc-angles-section" id="hc-angles">
+      <h3>The seven challenges collapse into three strategic angles for Mars.</h3>
+      <p class="hc-sub">Each angle is an executive decision the leadership team should resolve before scaling. Each pulls together a cluster of the seven challenges above into a single, owner-shaped question.</p>
+
+      <div class="hc-angles-grid">
+
+        <div class="hc-angle-card a1">
+          <div class="hc-angle-head">
+            <div class="hc-angle-num">01</div>
+            <div class="hc-angle-tag">Data + Tech</div>
+          </div>
+          <div class="hc-angle-title">Address fragmentation of data &amp; tech.</div>
+          <div class="hc-angle-q">How do we unify fragmented data across Mars divisions, and add the right technology layer without rebuilding the wheel?</div>
+          <div class="hc-angle-pitfalls">Addresses challenges <strong>3 · 6</strong> &nbsp;·&nbsp; Data fragmentation, Time to value</div>
+
+          <div class="hc-angle-deep">
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">Healthcare evidence</div>
+              <div class="hc-angle-deep-text"><strong>Roche</strong> unified Pharma + Diagnostics on one data &amp; tech operating model, mandated from the top — single longitudinal view of clinical outcomes divisions actually use.</div>
+              <div class="hc-angle-stat-strip">
+                <div class="hc-angle-stat-num">~CHF 170M</div>
+                <div class="hc-angle-stat-cap">Annual savings · three platforms consolidated into one</div>
+              </div>
+            </div>
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">Cautionary case</div>
+              <div class="hc-angle-deep-text"><strong>Kaiser's $40M → $600M</strong> integration overrun and Roche's later dissolution of its digital-health CoE show the risk of building the platform <em>before</em> the value loop is proven.</div>
+            </div>
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">What Mars must decide</div>
+              <div class="hc-angle-deep-text">Where the shared identity spine lives, who owns the decision loop, and whether to build, partner or acquire the analytics layer. Lead with <strong>value moments</strong>, not a generic 360 view.</div>
+            </div>
+            <a href="#t4" class="hc-angle-link" onclick="document.querySelector('[data-tab=&quot;t4&quot;]').click(); return false;">Detailed plan: Move 01 →</a>
+          </div>
+        </div>
+
+        <div class="hc-angle-card a2">
+          <div class="hc-angle-head">
+            <div class="hc-angle-num">02</div>
+            <div class="hc-angle-tag">Value + WoW</div>
+          </div>
+          <div class="hc-angle-title">Build value attribution &amp; operating model.</div>
+          <div class="hc-angle-q">How do we design PLV incentives, attribution and a way-of-working that survive divisional P&amp;Ls?</div>
+          <div class="hc-angle-pitfalls">Addresses challenges <strong>1 · 2 · 5</strong> &nbsp;·&nbsp; Value attribution, Incentive misalignment, Causal proof</div>
+
+          <div class="hc-angle-deep">
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">Healthcare evidence</div>
+              <div class="hc-angle-deep-text">Four mechanisms in use today: <strong>J&amp;J</strong> patient-centric KPI cascaded into individual performance plans. <strong>Novartis × Qiagen</strong> companion-Dx revenue-sharing for Piqray. <strong>Roche Personalised Healthcare</strong> function bridges Pharma + Dx. <strong>CVS</strong> PSU portion linked to % customers using 2+ Health offerings.</div>
+            </div>
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">Pet-parent risk</div>
+              <div class="hc-angle-deep-text">Pet-parent lifecycle is <em>increasingly orchestrated by Chewy and retail platforms</em> — a window to act, not a permanent advantage.</div>
+            </div>
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">What Mars must decide</div>
+              <div class="hc-angle-deep-text">What the <strong>shadow PLV ledger</strong> measures (signal · diagnostic · intervention · adherence · outcome contribution) and what cross-divisional LTIP component looks like after the proof gate. Divisional P&amp;Ls stay intact.</div>
+            </div>
+            <a href="#t4" class="hc-angle-link" onclick="document.querySelector('[data-tab=&quot;t4&quot;]').click(); return false;">Detailed plan: Move 02 →</a>
+          </div>
+        </div>
+
+        <div class="hc-angle-card a3">
+          <div class="hc-angle-head">
+            <div class="hc-angle-num">03</div>
+            <div class="hc-angle-tag">Trust + Ethics</div>
+          </div>
+          <div class="hc-angle-title">Balance incentives with clinical trust.</div>
+          <div class="hc-angle-q">How do we maintain vet and pet-parent trust as PLV becomes the operating language?</div>
+          <div class="hc-angle-pitfalls">Addresses challenges <strong>4 · 7</strong> &nbsp;·&nbsp; Clinical trust risk, Privacy &amp; consent</div>
+
+          <div class="hc-angle-deep">
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">Healthcare evidence</div>
+              <div class="hc-angle-deep-text"><strong>Doximity "Physicians First"</strong> — the professional, not the algorithm, the decision-maker (~85% of US MDs registered). <strong>MA value-based care</strong> proves system value: 26.3% spend reduction, ~$12.8B in savings vs. traditional Medicare.</div>
+              <div class="hc-angle-stat-strip">
+                <div class="hc-angle-stat-num">$11.93</div>
+                <div class="hc-angle-stat-cap">Prevention ROI per $1 invested in preventing non-communicable conditions</div>
+              </div>
+            </div>
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">External pressure</div>
+              <div class="hc-angle-deep-text"><strong>UK CMA concluded its vet-services market investigation in March 2026</strong> with binding reforms — price transparency, prescription fees, ownership disclosure. This raises the bar, not lowers it.</div>
+            </div>
+            <div class="hc-angle-deep-row">
+              <div class="hc-angle-deep-label">What Mars must decide</div>
+              <div class="hc-angle-deep-text">Six non-negotiable trust gates as launch conditions — and the governance body that enforces "<em>value counts only after the gate</em>". Vet stays in control; every call is explainable.</div>
+            </div>
+            <a href="#t4" class="hc-angle-link" onclick="document.querySelector('[data-tab=&quot;t4&quot;]').click(); return false;">Detailed plan: Move 03 + 6 trust gates →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hc-angles-owner">
+        <div class="hc-angles-owner-tag">And who owns it?</div>
+        <div class="hc-angles-owner-text">Naming <strong>sprint owners and the first decision body</strong> is the prerequisite to all three. Without explicit ownership, the angles stall in shared accountability.</div>
       </div>
     </div>
 
@@ -3539,7 +4551,7 @@
             <circle cx="195" cy="310" r="58" fill="none" stroke="#E8B53A" stroke-width="2"/>
             <text x="195" y="298" text-anchor="middle" font-family="Antonio, sans-serif" font-size="11" font-weight="700" fill="#E8B53A">05</text>
             <text x="195" y="314" text-anchor="middle" font-family="Antonio, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">CONTRIB.</text>
-            <text x="195" y="328" text-anchor="middle" font-family="Antonio, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">CLTV</text>
+            <text x="195" y="328" text-anchor="middle" font-family="Antonio, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">PLV</text>
             <text x="195" y="342" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">Durable value, net of cost</text>
           </g>
           <!-- Node 6: top-left -->
@@ -3601,11 +4613,92 @@
   <div class="container">
     <div class="section-eyebrow">04 · Where to start · the plan for Mars</div>
     <h2 class="section-title">The plan for <span class="light">Mars Petcare.</span></h2>
-    <p class="section-lede">Tab 3 covered what other operating models teach. This tab translates that into a plan for Mars Petcare. Four strategic directions remain on the table; the evidence supports anchoring on <strong>health economics now, with lifecycle stewardship as the longer-term ambition</strong>. The pages that follow describe how this would operate.</p>
+    <p class="section-lede">Tab 3 covered the healthcare learnings, the seven challenges and how they collapse into three strategic angles. This tab translates those into the <strong>Three Moves Mars Petcare can make</strong>, anchored on Health Economics now with Lifecycle Stewardship as the longer-term ambition. The pages that follow describe how each Move would operate, with the senior-dog pathway as the first proof.</p>
 
     <div class="lean-intro">
       <h3>Where we'd start — and why</h3>
       <p><strong>Health Economics as the operating frame today. Lifecycle Stewardship as the horizon ambition.</strong> Health Economics builds the evidence layer — outcome data, costed and attributed — that makes Stewardship credible later. Skipping it means trying to scale a relationship model without the proof points to justify the cross-divisional investment.</p>
+    </div>
+
+    <!-- THREE MOVES OVERVIEW -->
+    <div class="moves-section">
+      <div class="moves-header">
+        <h3>Three Moves to operationalise Pet Lifetime Value.</h3>
+        <p class="moves-sub">Each Move addresses one of the strategic angles in Tab 3. Each combines a piece of Mars context with a proven healthcare playbook and a concrete first action.</p>
+      </div>
+
+      <div class="moves-grid">
+
+        <div class="move-card m1">
+          <div class="move-head">
+            <div class="move-num">Move 01</div>
+            <div class="move-tag">Data + Tech</div>
+          </div>
+          <div class="move-title">Unify fragmented data &amp; tech, without rebuilding the wheel.</div>
+
+          <div class="move-row">
+            <div class="move-row-label">Mars context</div>
+            <div class="move-row-text">Rich pet-health assets — Banfield's <strong>233M visits, 37M pet patients, 2.12B lab findings, 91.5B EMR rows</strong> — scattered across divisional systems. The gap is a shared identity spine and a single decision loop, not raw data.</div>
+          </div>
+
+          <div class="move-row">
+            <div class="move-row-label">Proven playbook · Roche</div>
+            <div class="move-row-text">Unified Pharma + Diagnostics on one data &amp; tech operating model, mandated from the top. <strong>~CHF 170M annual savings</strong>; three platforms consolidated into one; single longitudinal view divisions actually use.</div>
+          </div>
+
+          <div class="move-row">
+            <div class="move-row-label">How Mars moves first</div>
+            <div class="move-row-text">90-day pilot on ageing dogs (7+) via MVH/Banfield. Leadership mandate → one cohort → minimum data spine → decision layer with health-econ proxy → end-to-end metrics loop.</div>
+          </div>
+        </div>
+
+        <div class="move-card m2">
+          <div class="move-head">
+            <div class="move-num">Move 02</div>
+            <div class="move-tag">Value + WoW</div>
+          </div>
+          <div class="move-title">Design cross-divisional PLV incentives that actually stick.</div>
+
+          <div class="move-row">
+            <div class="move-row-label">Mars context</div>
+            <div class="move-row-text">Divisions optimise local KPIs, not pet-lifetime value. <strong>No shared ledger today</strong> recognising value created by one division for another. Pet-parent lifecycle increasingly orchestrated by Chewy and retail platforms.</div>
+          </div>
+
+          <div class="move-row">
+            <div class="move-row-label">Proven playbook · 4 mechanisms</div>
+            <div class="move-row-text">Shared metric (<strong>J&amp;J patient-centric KPI</strong>, MultiCare scorecards). Revenue attribution (Novartis × Qiagen companion-Dx). Cross-divisional function (<strong>Roche Personalised Healthcare</strong>, Astellas patient axis, CVS PSU on multi-offering customers).</div>
+          </div>
+
+          <div class="move-row">
+            <div class="move-row-label">How Mars moves first</div>
+            <div class="move-row-text"><strong>Shadow PLV ledger on top of P&amp;Ls.</strong> Phase 1 (0–12 months): tracks value created between divisions per pet, no compensation tied. Phase 2 (after proof gate): modest cross-divisional LTIP component. Divisional P&amp;Ls unchanged throughout.</div>
+          </div>
+        </div>
+
+        <div class="move-card m3">
+          <div class="move-head">
+            <div class="move-num">Move 03</div>
+            <div class="move-tag">Trust + Ethics</div>
+          </div>
+          <div class="move-title">Keep clinical trust intact as PLV becomes the operating language.</div>
+
+          <div class="move-row">
+            <div class="move-row-label">Mars context</div>
+            <div class="move-row-text">Trust is the binding constraint, not a soft factor. <strong>UK CMA concluded its vet-services market investigation in March 2026</strong> with binding reforms (price transparency, prescription fees, ownership disclosure). Pet health data is trust-sensitive.</div>
+          </div>
+
+          <div class="move-row">
+            <div class="move-row-label">Proven playbook</div>
+            <div class="move-row-text">Clinician-first cultures (<strong>Doximity "Physicians First"</strong>, Qiagen EMPOWER). Value-based and subscription models (Agilon Health, Omada, GoodRx Gold). Proof of system value (MA value-based care: <strong>26.3% spend reduction</strong>, prevention ROI $11.93 per $1 invested).</div>
+          </div>
+
+          <div class="move-row">
+            <div class="move-row-label">How Mars moves first</div>
+            <div class="move-row-text"><strong>Six non-negotiable trust gates</strong> — all must hold for PLV uplift to count. PLV stays backstage; vet stays in control; every call is explainable; pre-go-live trust gates; trust as a hard KPI; value counts only after the gate.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="embedded-image">
@@ -3770,8 +4863,8 @@
         <div class="frame-cell frame-row-label">Measurement</div>
         <div class="frame-cell faded">Nutrition revenue × tenure</div>
         <div class="frame-cell faded">Contractual recurring value</div>
-        <div class="frame-cell where"><strong>CLTV = economic value of outcomes</strong></div>
-        <div class="frame-cell faded">CLTV = lifetime value across assets</div>
+        <div class="frame-cell where"><strong>PLV = economic value of outcomes</strong></div>
+        <div class="frame-cell faded">PLV = lifetime value across assets</div>
 
         <div class="frame-cell frame-row-label" style="border-bottom:none;">Op Model</div>
         <div class="frame-cell faded" style="border-bottom:none;">Anchor in PN, clinic as channel</div>
@@ -3797,6 +4890,103 @@
     <div class="pilot-section">
       <h3>The first proof — senior pets, end to end</h3>
       <p class="pilot-sub">The smallest pilot Mars can run that still produces an externally credible result. Designed to test whether the value tree actually closes across divisions.</p>
+
+      <!-- Hannah & Milo persona (anchors the pilot in a human story) -->
+      <div class="persona-block">
+        <span class="persona-tag">Example pet-parent journey</span>
+        <div class="persona-header">
+          <h4>Meet Hannah &amp; Milo</h4>
+          <p>The senior-dog pilot follows one household end-to-end across an eight-month arc. The persona makes the pilot concrete for the executive room and gives the value tree a tangible test case.</p>
+        </div>
+
+        <div class="persona-row">
+          <div class="persona-cell">
+            <div class="persona-cell-eyebrow">Pet parent</div>
+            <div class="persona-name">Hannah</div>
+            <div class="persona-detail">Secondary school teacher, suburban York. Lives with partner and two teenage children.</div>
+            <div class="persona-tags">
+              <span class="persona-pill">Homeowner, semi-detached</span>
+              <span class="persona-pill">Petplan mid-tier · £45/mo</span>
+              <span class="persona-pill">MVH clinic 6 yrs</span>
+              <span class="persona-pill">High smartphone usage</span>
+              <span class="persona-pill">Dry food, weekly supermarket</span>
+            </div>
+          </div>
+          <div class="persona-cell">
+            <div class="persona-cell-eyebrow">Pet</div>
+            <div class="persona-name">Milo · Labrador, 8 yrs</div>
+            <div class="persona-detail">Neutered male, <strong>38kg</strong> (slightly overweight), <strong>Body Condition Score 6/9</strong>. No prior chronic conditions, vaccinations current.</div>
+            <div class="persona-tags">
+              <span class="persona-pill">Senior life-stage</span>
+              <span class="persona-pill">Weight flagged</span>
+              <span class="persona-pill">No chronic Dx</span>
+            </div>
+          </div>
+          <div class="persona-cell persona-stats">
+            <div class="persona-cell-eyebrow">Outcome the pilot tests</div>
+            <div style="display:flex; gap:18px; margin-top:4px;">
+              <div>
+                <div class="persona-stat-num">+2.4 yrs</div>
+                <div class="persona-stat-cap">Estimated healthy life added · weight + monitoring + nutrition</div>
+              </div>
+              <div>
+                <div class="persona-stat-num" style="color:var(--navy);">£XX</div>
+                <div class="persona-stat-cap">Ecosystem revenue over the 8-month journey · to be sized in pilot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="persona-journey">
+          <div class="persona-journey-label">The 8-month journey · how the ecosystem activates around Milo</div>
+          <div class="journey-flow">
+            <div class="journey-step">
+              <div class="journey-step-time">Week 1 · Trigger</div>
+              <div class="journey-step-title">The limp.</div>
+              <div class="journey-step-body">Hannah notices Milo favouring his left leg after a walk. Books an MVH appointment — her first contact with the Mars ecosystem.</div>
+              <div class="journey-step-divs">
+                <span class="journey-div-pill mvh">MVH</span>
+                <span class="journey-div-pill sdx">SDx</span>
+                <span class="journey-div-pill rc">RC</span>
+                <span class="journey-div-pill ext">Ext</span>
+              </div>
+            </div>
+            <div class="journey-arrow" aria-hidden="true">→</div>
+            <div class="journey-step">
+              <div class="journey-step-time">Week 2 · Plan</div>
+              <div class="journey-step-title">Manageable, with focus.</div>
+              <div class="journey-step-body">Arthritis confirmed but manageable. Biggest lever right now: address Milo's weight. Care plan combines MVH protocol + Royal Canin nutrition.</div>
+              <div class="journey-step-divs">
+                <span class="journey-div-pill mvh">MVH</span>
+                <span class="journey-div-pill rc">RC</span>
+                <span class="journey-div-pill ext">Ext</span>
+              </div>
+            </div>
+            <div class="journey-arrow" aria-hidden="true">→</div>
+            <div class="journey-step">
+              <div class="journey-step-time">Month 5 · Flare-up</div>
+              <div class="journey-step-title">A bad week.</div>
+              <div class="journey-step-body">Milo's limp returns. Out-of-hours MVH care team already has his history — recommends rest and a short prescription course. No re-explaining.</div>
+              <div class="journey-step-divs">
+                <span class="journey-div-pill mvh">MVH</span>
+                <span class="journey-div-pill sdx">SDx</span>
+                <span class="journey-div-pill ext">Ext</span>
+              </div>
+            </div>
+            <div class="journey-arrow" aria-hidden="true">→</div>
+            <div class="journey-step thrive">
+              <div class="journey-step-time">Month 8 · Thriving</div>
+              <div class="journey-step-title">33.4kg, markers −40%.</div>
+              <div class="journey-step-body">Milo is just above target weight. Inflammatory markers down ~40% from baseline. Not cured — but two-to-three good years added for Milo and the family.</div>
+              <div class="journey-step-divs">
+                <span class="journey-div-pill mvh">MVH</span>
+                <span class="journey-div-pill sdx">SDx</span>
+                <span class="journey-div-pill rc">RC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="pilot-frame">
         <div class="pilot-name">Senior Pet Proactive Health Pathway</div>
@@ -3881,6 +5071,69 @@
         </ul>
       </div>
 
+    </div>
+
+    <!-- SIX NON-NEGOTIABLE TRUST GATES -->
+    <div class="gates-section">
+      <h3>Six non-negotiable trust gates — all must hold for PLV uplift to count.</h3>
+      <p class="sub">Drawn directly from Move 03 in Tab 4. Not sequential: every gate must hold simultaneously. PLV uplift is recognised only after all six are passing.</p>
+      <div class="gates-mandate">All six gates active · No exceptions · Board-visible</div>
+
+      <div class="gates-grid">
+        <div class="gate-card">
+          <div class="gate-head">
+            <div class="gate-num">1</div>
+            <div class="gate-title">PLV stays backstage</div>
+          </div>
+          <div class="gate-body">Internal measurement only. External language stays health, prevention, access — never CLTV or commercial framing in clinic.</div>
+          <div class="gate-kpi"><strong>KPI</strong> &nbsp;Quarterly external-language audit</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="gate-head">
+            <div class="gate-num">2</div>
+            <div class="gate-title">Vet stays in control</div>
+          </div>
+          <div class="gate-body">AI and data are decision support, never instruction. Vet can override any recommendation; reason codes captured for every override.</div>
+          <div class="gate-kpi"><strong>KPI</strong> &nbsp;Vet override rate</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="gate-head">
+            <div class="gate-num">3</div>
+            <div class="gate-title">Every call is explainable</div>
+          </div>
+          <div class="gate-body">Each recommendation answers five questions: why this pet, why now, what data, what options, what cost. No black-box outputs.</div>
+          <div class="gate-kpi"><strong>KPI</strong> &nbsp;% recs with full rationale</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="gate-head">
+            <div class="gate-num">4</div>
+            <div class="gate-title">Pre-go-live trust gates</div>
+          </div>
+          <div class="gate-body">Clinical appropriateness · informed consent · price transparency. A pre-launch checklist passed for every pathway before any roll-out.</div>
+          <div class="gate-kpi"><strong>KPI</strong> &nbsp;Pathway-launch checklist pass rate</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="gate-head">
+            <div class="gate-num">5</div>
+            <div class="gate-title">Trust as a hard KPI</div>
+          </div>
+          <div class="gate-body">Pet-parent NPS, vet workload, opt-outs, unnecessary diagnostics — all surfaced in the same dashboard as PLV, not as a separate "soft" report.</div>
+          <div class="gate-kpi"><strong>KPI</strong> &nbsp;Monthly trust dashboard, board-visible</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="gate-head">
+            <div class="gate-num">6</div>
+            <div class="gate-title">Value counts only after the gate</div>
+          </div>
+          <div class="gate-body">PLV uplift is recognised only if outcomes improve <em>and</em> trust does not erode. A net measure — gains discounted by any trust degradation.</div>
+          <div class="gate-kpi"><strong>KPI</strong> &nbsp;Net PLV after trust adjustment</div>
+        </div>
+      </div>
     </div>
 
     <!-- GANTT CHART -->
